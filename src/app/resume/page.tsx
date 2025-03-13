@@ -1,6 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
-
 // Skills
 const skills = [
   { category: "Frontend", technologies: ["React", "Next.js", "TypeScript", "TailwindCSS"] },
