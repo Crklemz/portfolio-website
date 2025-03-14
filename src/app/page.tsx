@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+// import styles from "@/styles/Home.module.css";
 import { motion } from "framer-motion";
 import {
   FaReact, FaNodeJs, FaPython, FaAws, FaDocker, FaGithub, FaPhp, FaDatabase,

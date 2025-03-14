@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
-import "./globals.css";
+import "@/styles/globals.css";
 
 export const metadata = {
   title: "My Portfolio",
