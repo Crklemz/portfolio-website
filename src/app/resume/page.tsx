@@ -27,7 +27,7 @@ export default function ResumePage() {
                     </div>
                     <div>
                         <h3 className="text-xl font-semibold">Frameworks & Libraries</h3>
-                        <p>React, Next.js, Redux, MaterialUI, TailwindCSS, Django, WordPress, Node.js</p>
+                        <p>React, Next.js, Redux, MaterialUI, TailwindCSS, Django, Django Rest Framework, WordPress, Node.js</p>
                     </div>
                     <div>
                         <h3 className="text-xl font-semibold">Databases</h3>
