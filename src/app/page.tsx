@@ -1,101 +1,91 @@
-import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker, FaGithub, FaPhp, FaDatabase, FaHtml5, FaCss3, FaWordpress } from "react-icons/fa";
-import { SiNextdotjs, SiDjango, SiGooglecloud, SiPostgresql, SiMysql, SiRedux, SiJavascript, SiTypescript, SiSass } from "react-icons/si";
+"use client";
+
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  FaReact, FaNodeJs, FaPython, FaAws, FaDocker, FaGithub, FaPhp, FaDatabase,
+  FaHtml5, FaCss3, FaWordpress
+} from "react-icons/fa";
+import {
+  SiNextdotjs, SiDjango, SiGooglecloud, SiPostgresql, SiMysql, SiRedux,
+  SiJavascript, SiTypescript, SiSass
+} from "react-icons/si";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-center bg-[var(--background)] text-[var(--foreground)] px-6">
-      {/* Headline */}
-      <h1 className="text-5xl font-bold">Hi, I&apos;m Chris!</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen text-center bg-[var(--background)] text-[var(--foreground)] px-6 relative">
 
-      {/* About Me */}
-      <p className="text-lg mt-4 max-w-2xl">
+      {/* Background Accent Effect */}
+      <div className="absolute inset-0 bg-gradient-radial from-gray-900 to-black opacity-60 -z-10"></div>
+
+      {/* Hero Section */}
+      <motion.h1
+        className="text-5xl font-extrabold tracking-wide text-accent"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Hi, I&apos;m Chris!
+      </motion.h1>
+
+      <motion.p
+        className="text-lg mt-4 max-w-2xl text-secondary"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
         I&apos;m a Full-Stack Developer with expertise in React, React Native, Django, and WordPress.
         I build scalable, high-performance web applications and have hands-on experience with cloud platforms like AWS and GCP.
         I also work with Docker and GitHub Actions to streamline CI/CD workflows.
         Lately, I&apos;ve been diving deeper into AI development, exploring ways to create smarter, more efficient solutions.
-      </p>
+      </motion.p>
 
-      {/* CTA Buttons */}
-      <div className="mt-6 space-x-4">
-        <a href="/projects" className="btn-primary">View My Work</a>
-        <a href="/contact" className="btn-secondary">Contact Me</a>
+      {/* Call-to-Action Buttons */}
+      <div className="mt-6 space-x-4 flex">
+        <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
+          <Link href="/projects" className="btn-primary">View My Work</Link>
+        </motion.div>
+        <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
+          <Link href="/contact" className="btn-secondary">Contact Me</Link>
+        </motion.div>
       </div>
 
       {/* Skills Section */}
-      <section className="mt-12">
-        <h2 className="text-3xl font-semibold mb-6">My Tech Stack</h2>
-        <div className="grid grid-cols-3 md:grid-cols-4 gap-6 text-4xl">
-          {/* Programming Languages */}
-          <div className="flex flex-col items-center">
-            <SiJavascript className="text-yellow-500" /> <span className="text-sm mt-2">JavaScript</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <SiTypescript className="text-blue-500" /> <span className="text-sm mt-2">TypeScript</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <FaPython className="text-blue-600" /> <span className="text-sm mt-2">Python</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <FaPhp className="text-purple-600" /> <span className="text-sm mt-2">PHP</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <FaDatabase className="text-gray-600" /> <span className="text-sm mt-2">SQL</span>
-          </div>
+      <section className="py-16 border-b border-gray-700 text-center w-full">
+        <h2 className="text-4xl font-semibold mb-4">My Tech Stack</h2>
+        <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+          Technologies I use to build scalable and high-performance applications.
+        </p>
 
-          {/* Frontend */}
-          <div className="flex flex-col items-center">
-            <FaReact className="text-blue-500" /> <span className="text-sm mt-2">React</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <SiNextdotjs className="text-black dark:text-white" /> <span className="text-sm mt-2">Next.js</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <SiRedux className="text-purple-500" /> <span className="text-sm mt-2">Redux</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <FaWordpress className="text-blue-600" /> <span className="text-sm mt-2">WordPress</span>
-          </div>
-
-          {/* Backend */}
-          <div className="flex flex-col items-center">
-            <SiDjango className="text-green-600" /> <span className="text-sm mt-2">Django</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <FaNodeJs className="text-green-500" /> <span className="text-sm mt-2">Node.js</span>
-          </div>
-
-          {/* Styling */}
-          <div className="flex flex-col items-center">
-            <FaHtml5 className="text-orange-500" /> <span className="text-sm mt-2">HTML</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <FaCss3 className="text-blue-500" /> <span className="text-sm mt-2">CSS</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <SiSass className="text-pink-500" /> <span className="text-sm mt-2">SCSS</span>
-          </div>
-
-          {/* Databases & CMS */}
-          <div className="flex flex-col items-center">
-            <SiPostgresql className="text-blue-500" /> <span className="text-sm mt-2">PostgreSQL</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <SiMysql className="text-blue-600" /> <span className="text-sm mt-2">MySQL</span>
-          </div>
-
-          {/* Cloud & DevOps */}
-          <div className="flex flex-col items-center">
-            <FaAws className="text-orange-500" /> <span className="text-sm mt-2">AWS</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <SiGooglecloud className="text-blue-400" /> <span className="text-sm mt-2">GCP</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <FaDocker className="text-blue-600" /> <span className="text-sm mt-2">Docker</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <FaGithub className="text-gray-900 dark:text-white" /> <span className="text-sm mt-2">GitHub Actions</span>
-          </div>
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-6 text-4xl bg-white/10 backdrop-blur-md p-8 rounded-lg shadow-lg mt-8">
+          {/* Tech Stack Icons with Hover Effects */}
+          {[
+            { icon: SiJavascript, label: "JavaScript", color: "text-yellow-500" },
+            { icon: SiTypescript, label: "TypeScript", color: "text-blue-500" },
+            { icon: FaPython, label: "Python", color: "text-blue-600" },
+            { icon: FaPhp, label: "PHP", color: "text-purple-600" },
+            { icon: FaDatabase, label: "SQL", color: "text-gray-600" },
+            { icon: FaReact, label: "React", color: "text-blue-500" },
+            { icon: SiNextdotjs, label: "Next.js", color: "text-black dark:text-white" },
+            { icon: SiRedux, label: "Redux", color: "text-purple-500" },
+            { icon: FaWordpress, label: "WordPress", color: "text-blue-600" },
+            { icon: SiDjango, label: "Django", color: "text-green-600" },
+            { icon: FaNodeJs, label: "Node.js", color: "text-green-500" },
+            { icon: FaHtml5, label: "HTML", color: "text-orange-500" },
+            { icon: FaCss3, label: "CSS", color: "text-blue-500" },
+            { icon: SiSass, label: "SCSS", color: "text-pink-500" },
+            { icon: SiPostgresql, label: "PostgreSQL", color: "text-blue-500" },
+            { icon: SiMysql, label: "MySQL", color: "text-blue-600" },
+            { icon: FaAws, label: "AWS", color: "text-orange-500" },
+            { icon: SiGooglecloud, label: "GCP", color: "text-blue-400" },
+            { icon: FaDocker, label: "Docker", color: "text-blue-600" },
+            { icon: FaGithub, label: "GitHub Actions", color: "text-gray-900 dark:text-white" },
+          ].map(({ icon: Icon, label, color }, index) => (
+            <motion.div key={index} className="flex flex-col items-center transition-transform transform hover:scale-110">
+              <Icon className={`${color} drop-shadow-md`} />
+              <span className="text-sm mt-2 text-gray-300">{label}</span>
+            </motion.div>
+          ))}
         </div>
       </section>
     </div>

@@ -28,22 +28,31 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ✅ Add custom classes using Tailwind styles */
-.text-primary {
-  color: var(--primary);
+/* ✅ Button Styles */
+.btn-primary {
+  background: linear-gradient(to right, #007bff, #6610f2);
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.bg-primary {
-  background-color: var(--primary);
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
-.text-secondary {
-  color: var(--secondary);
+
+.btn-secondary {
+  background: #333;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.bg-secondary {
-  background-color: var(--secondary);
-}
-.text-accent {
-  color: var(--accent);
-}
-.bg-accent {
-  background-color: var(--accent);
+.btn-secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
