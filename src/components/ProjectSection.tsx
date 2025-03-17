@@ -1,7 +1,6 @@
 "use client";
 
 import styles from "@/styles/Projects.module.css";
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 // Sample Project Data
