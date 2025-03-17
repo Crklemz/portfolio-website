@@ -75,15 +75,6 @@ label {
   color: var(--foreground);
 }
 
-/* Background Effects */
-.bgAccentEffect {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle, #1a202c, #000000);
-  opacity: 0.6;
-  z-index: -10;
-}
-
 /* Button Styles */
 .btn-primary {
   background: linear-gradient(to right, var(--primary), #6610f2);
