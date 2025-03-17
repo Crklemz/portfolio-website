@@ -11,7 +11,7 @@ const testimonials = [
     name: "Hunter Rancourt",
     role: "Senior Full-Stack Engineer",
     quote:
-      "Chris stands out as one of the nicest and kindest individuals I've ever met, effortlessly fitting in and forming connections with everyone he encounters.",
+      "Chris stands out as one of the nicest and kindest individuals I&apos;ve ever met, effortlessly fitting in and forming connections with everyone he encounters.",
   },
   {
     name: "James Kelley",
