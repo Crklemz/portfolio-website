@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import TechStack from "@/components/TechStack";
 import ProjectsSection from "@/components/ProjectSection";
 import Testimonials from "@/components/Testimonials";
+import ContactSection from "@/components/ContactSection";
 import styles from "@/styles/Home.module.css";
 import { motion } from "framer-motion";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <TechStack />
       <ProjectsSection />
       <Testimonials />
+      <ContactSection />
     </div>
   );
 }
