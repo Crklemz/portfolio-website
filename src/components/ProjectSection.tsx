@@ -1,8 +1,10 @@
 "use client";
 
 import styles from "@/styles/Projects.module.css";
-import { motion } from "framer-motion";  // ✅ Make sure this is correct
+import { motion } from "framer-motion";
+import Link from "next/link";
 
+// Sample Project Data
 const projects = [
   {
     title: "Next.js Portfolio Website",
@@ -10,7 +12,7 @@ const projects = [
     tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
     liveUrl: "#",
     githubUrl: "#",
-    image: "https://via.placeholder.com/300x200",
+    image: "https://via.placeholder.com/300x200", // Replace with actual project image
   },
   {
     title: "AI-Powered Blog Generator",
@@ -30,15 +32,15 @@ const projects = [
   },
 ];
 
-export default function ProjectsPage() {
+export default function ProjectsSection() {
   return (
-    <div className={styles.projectsPage}>
-      <h1 className={styles.pageTitle}>Projects</h1>
-      <p className={styles.pageSubtitle}>Here are some projects I've built recently.</p>
+    <section className={styles.projectsSection}>
+      <h2>Featured Projects</h2>
+      <p>Check out some of my latest work.</p>
 
       <div className={styles.projectsGrid}>
         {projects.map((project, index) => (
-          <div key={index} className={styles.projectCard}>
+            <div key={index} className={styles.projectCard}>
             <img src={project.image} alt={project.title} className={styles.projectImage} />
             <div className={styles.projectContent}>
               <h3>{project.title}</h3>
@@ -56,6 +58,8 @@ export default function ProjectsPage() {
           </div>
         ))}
       </div>
-    </div>
+
+      <Link href="/projects" className="btn-primary mt-6">View More Projects</Link>
+    </section>
   );
 }

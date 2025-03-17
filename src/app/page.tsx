@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import TechStack from "@/components/TechStack";
+import ProjectsSection from "@/components/ProjectSection";
 import styles from "@/styles/Home.module.css";
 import { motion } from "framer-motion";
 
@@ -25,9 +26,13 @@ export default function Home() {
           <Link href="/contact" className="btn-secondary">Contact Me</Link>
         </motion.div>
       </div>
-      
+
       {/* Tech Stack Section */}
       <TechStack />
+
+      {/* Projects Section */}
+      <ProjectsSection />
+
     </div>
   );
 }
