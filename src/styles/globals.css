@@ -7,10 +7,14 @@
   --primary: #007bff;
   --secondary: #6c757d;
   --accent: #64ffda;
-  --font-sans: Arial, Helvetica, sans-serif;
-  --font-mono: monospace;
+
+  /* Google Fonts */
+  --font-heading: var(--font-space-grotesk);
+  --font-body: var(--font-work-sans);
+  --font-mono: var(--font-fira-code);  
 }
 
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -18,14 +22,42 @@
   }
 }
 
-/* Apply Theme */
+/* Apply Global Styles */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Input & Textarea Styles */
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--foreground);
+}
+code {
+  font-family: var(--font-mono);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Form Elements */
 input, textarea {
   border: 1px solid var(--secondary);
   padding: 10px;
@@ -33,14 +65,11 @@ input, textarea {
   width: 100%;
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-
 input:focus, textarea:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
-
-/* Label Styles */
 label {
   font-weight: bold;
   color: var(--foreground);
@@ -73,4 +102,18 @@ label {
 .btn-secondary:hover {
   transform: scale(1.05);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
 }
