@@ -17,16 +17,6 @@ export default function Home() {
       {/* Hero Section */}
       < Hero />
 
-      {/* Call-to-Action Buttons */}
-      <div className="mt-6 space-x-4 flex">
-        <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
-          <Link href="/projects" className="btn-primary">View My Work</Link>
-        </motion.div>
-        <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
-          <Link href="/contact" className="btn-secondary">Contact Me</Link>
-        </motion.div>
-      </div>
-
       {/* Tech Stack Section */}
       <TechStack />
 

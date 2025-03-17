@@ -28,19 +28,14 @@ export default function Hero() {
             </motion.p>
 
             {/* CTA Buttons */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className={styles.buttonContainer}
-            >
-                <Link href="/projects" className={styles.primaryButton}>
-                    View My Work
-                </Link>
-                <Link href="/contact" className={styles.secondaryButton}>
-                    Contact Me
-                </Link>
-            </motion.div>
+            <div className="mt-6 space-x-4 flex">
+                <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
+                    <Link href="/projects" className="btn-primary">View My Work</Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
+                    <Link href="/contact" className="btn-secondary">Contact Me</Link>
+                </motion.div>
+            </div>
 
             {/* Wave Background */}
             <div className={styles.waveWrapper}>
