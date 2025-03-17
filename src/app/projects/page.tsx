@@ -33,7 +33,7 @@ export default function ProjectsPage() {
   return (
     <div className={styles.projectsPage}>
       <h1 className={styles.pageTitle}>Projects</h1>
-      <p className={styles.pageSubtitle}>Here are some projects I've built recently.</p>
+      <p className={styles.pageSubtitle}>Here are some projects I&apos;ve built recently.</p>
 
       <div className={styles.projectsGrid}>
         {projects.map((project, index) => (

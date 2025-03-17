@@ -14,7 +14,7 @@ export default function ContactSection() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Let's Connect
+        Let&apos;s Connect
       </motion.h2>
 
       <motion.p
