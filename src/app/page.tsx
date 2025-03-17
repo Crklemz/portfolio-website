@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Hero from "@/components/Hero";
 // import styles from "@/styles/Home.module.css";
 import { motion } from "framer-motion";
 import {
@@ -20,26 +21,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-gradient-radial from-gray-900 to-black opacity-60 -z-10"></div>
 
       {/* Hero Section */}
-      <motion.h1
-        className="text-5xl font-extrabold tracking-wide text-accent"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        Hi, I&apos;m Chris!
-      </motion.h1>
-
-      <motion.p
-        className="text-lg mt-4 max-w-2xl text-secondary"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-      >
-        I&apos;m a Full-Stack Developer with expertise in React, React Native, Django, and WordPress.
-        I build scalable, high-performance web applications and have hands-on experience with cloud platforms like AWS and GCP.
-        I also work with Docker and GitHub Actions to streamline CI/CD workflows.
-        Lately, I&apos;ve been diving deeper into AI development, exploring ways to create smarter, more efficient solutions.
-      </motion.p>
+      < Hero />
 
       {/* Call-to-Action Buttons */}
       <div className="mt-6 space-x-4 flex">
