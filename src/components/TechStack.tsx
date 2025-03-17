@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa";
 import {
     SiNextdotjs, SiDjango, SiGooglecloud, SiPostgresql, SiMysql, SiRedux,
-    SiJavascript, SiTypescript, SiSass
+    SiJavascript, SiTypescript, SiSass, SiTailwindcss
 } from "react-icons/si";
 
 const techStack = [
@@ -24,6 +24,7 @@ const techStack = [
     { icon: FaHtml5, label: "HTML", color: "text-orange-500" },
     { icon: FaCss3, label: "CSS", color: "text-blue-500" },
     { icon: SiSass, label: "SCSS", color: "text-pink-500" },
+    { icon: SiTailwindcss, label: "Tailwind CSS", color: "text-teal-400" },
     { icon: SiPostgresql, label: "PostgreSQL", color: "text-blue-500" },
     { icon: SiMysql, label: "MySQL", color: "text-blue-600" },
     { icon: FaAws, label: "AWS", color: "text-orange-500" },
@@ -41,23 +42,21 @@ export default function TechStack() {
             <div className={styles.techGrid}>
                 {techStack.map(({ icon: Icon, label, color }, index) => (
                     <motion.div
-  key={index}
-  className={styles.techIcon}
-  initial={{ y: 0 }}
-  animate={{ y: [0, -5, 0] }}
-  transition={{
-    duration: 2,
-    ease: "easeInOut",
-    repeat: Infinity,
-    repeatType: "reverse",
-    delay: index * 0.1, // Slight stagger for better effect
-  }}
->
-  <Icon className={`${color}`} />
-  <span className={styles.techLabel}>{label}</span>
-</motion.div>
-
-
+                        key={index}
+                        className={styles.techIcon}
+                        initial={{ y: 0 }}
+                        animate={{ y: [0, -5, 0] }}
+                        transition={{
+                            duration: 2,
+                            ease: "easeInOut",
+                            repeat: Infinity,
+                            repeatType: "reverse",
+                            delay: index * 0.1, // Slight stagger for better effect
+                        }}
+                    >
+                        <Icon className={`${color}`} />
+                        <span className={styles.techLabel}>{label}</span>
+                    </motion.div>
                 ))}
             </div>
         </section>
