@@ -1,0 +1,78 @@
+/* Testimonials Section */
+.testimonialsSection {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    margin: 4rem auto;
+    max-width: 800px;
+  }
+  
+  /* Section Title */
+  .sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  /* Subtitle */
+  .sectionSubtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+  }
+  
+  /* Carousel Container */
+  .carouselContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Testimonial Card */
+  .testimonialCard {
+    max-width: 600px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  /* Quote */
+  .quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  /* Name */
+  .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Role */
+  .role {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Arrows */
+  .arrow {
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    opacity: 0.7;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .arrow:hover {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  
