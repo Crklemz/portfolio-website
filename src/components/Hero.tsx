@@ -28,7 +28,7 @@ export default function Hero() {
             </motion.p>
 
             {/* CTA Buttons */}
-            <div className="mt-6 space-x-4 flex">
+            <div className={`${styles.buttonContainer} mt-6`}>
                 <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
                     <Link href="/projects" className="btn-primary">View My Work</Link>
                 </motion.div>
