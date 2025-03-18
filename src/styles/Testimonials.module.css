@@ -76,3 +76,55 @@
     opacity: 1;
   }
   
+  /* Mobile Responsive Styling */
+@media (max-width: 768px) {
+  .testimonialsSection {
+    padding: 3rem 1rem;
+    max-width: 95%;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .carouselContainer {
+    flex-direction: column;
+  }
+
+  .testimonialCard {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .role {
+    font-size: 0.9rem;
+  }
+
+  .arrow {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .arrow:first-of-type {
+    left: -15px;
+  }
+
+  .arrow:last-of-type {
+    right: -15px;
+  }
+}
