@@ -78,11 +78,6 @@
   
   /* Mobile Responsive Styling */
 @media (max-width: 768px) {
-  .testimonialsSection {
-    padding: 3rem 1rem;
-    max-width: 95%;
-  }
-
   .sectionTitle {
     font-size: 2rem;
   }
@@ -94,11 +89,6 @@
 
   .carouselContainer {
     flex-direction: column;
-  }
-
-  .testimonialCard {
-    max-width: 100%;
-    padding: 1.5rem;
   }
 
   .quote {
