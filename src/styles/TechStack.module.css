@@ -1,6 +1,5 @@
 /* Tech Stack Section */
 .techStack {
-    padding: 4rem 2rem;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -10,7 +9,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 1.5rem;
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 1.5rem;
     background: rgba(255, 255, 255, 0.05);
@@ -44,4 +43,30 @@
     font-size: 0.9rem;
     margin-top: 0.5rem;
     color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .techStack {
+    padding: 3rem 1rem;
+  }
+
+  .techStack h2 {
+    font-size: 2rem;
+  }
+
+  .techStack p {
+    font-size: 1.1rem;
+  }
+
+  .techGrid {
+    gap: 1rem;
+  }
+
+  .techIcon svg {
+    font-size: 2.5rem;
+  }
+
+  .techIcon span {
+    font-size: 0.85rem;
+  }
 }
