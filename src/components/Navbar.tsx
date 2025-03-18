@@ -1,18 +1,37 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import styles from "@/styles/Navbar.module.css";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="bg-[var(--background)] text-[var(--foreground)] p-4 border-b">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-xl font-bold">Chris&apos; Portfolio</h1>
-        <ul className="flex space-x-4">
-          <li><Link href="/" className="hover:text-accent">Home</Link></li>
-          <li><Link href="/resume" className="hover:text-accent">Resume</Link></li>
-          <li><Link href="/projects" className="hover:text-accent">Projects</Link></li>
-          <li><Link href="/about" className="hover:text-accent">About</Link></li>
-          <li><Link href="/contact" className="hover:text-accent">Contact</Link></li>
-        </ul>
+    <nav className={styles.navbar}>
+      <Link href="/" className={styles.navbarLogo}>Chris Klemz</Link>
+
+      {/* Desktop Links */}
+      <div className={styles.navLinks}>
+        <Link href="/projects">Projects</Link>
+        <Link href="/about">About</Link>
+        <Link href="/contact">Contact</Link>
       </div>
+
+      {/* Hamburger Menu (Hidden on Desktop) */}
+      <div className={styles.menuIcon} onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className={styles.mobileMenu}>
+          <Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
+          <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
+          <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+        </div>
+      )}
     </nav>
   );
 }
