@@ -60,7 +60,7 @@ export default function Testimonials() {
                         exit={{ opacity: 0, x: 0, scale: 0.9 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <p className={styles.quote}>"{testimonials[index].quote}"</p>
+                        <p className={styles.quote}>&quot;{testimonials[index].quote}&quot;</p>
                         <h3 className={styles.name}>{testimonials[index].name}</h3>
                         <span className={styles.role}>{testimonials[index].role}</span>
                     </motion.div>
