@@ -10,7 +10,7 @@ const projects = [
     tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
     liveUrl: "#",
     githubUrl: "#",
-    image: "https://placehold.co/300x200",
+    image: "/images/projects/portfolio.png",
   },
   {
     title: "AI-Powered Blog Generator",
@@ -18,7 +18,7 @@ const projects = [
     tech: ["React", "OpenAI API", "Node.js"],
     liveUrl: "#",
     githubUrl: "#",
-    image: "https://placehold.co/300x200",
+    image: "/images/projects/blog-generator.png",
   },
   {
     title: "E-Commerce Dashboard",
@@ -26,7 +26,7 @@ const projects = [
     tech: ["Django", "React", "PostgreSQL"],
     liveUrl: "#",
     githubUrl: "#",
-    image: "https://placehold.co/300x200",
+    image: "/images/projects/ecommerce-dashboard.png",
   },
 ];
 
