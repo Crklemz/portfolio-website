@@ -17,7 +17,7 @@ const testimonials = [
     name: "James Kelley",
     role: "DevOps Engineer",
     quote:
-      "His commitment to the team, work ethic, and communication is what really makes him shine and sets him apart from many people I’ve worked with.",
+      "His commitment to the team, work ethic, and communication is what really makes him shine and sets him apart from many people I&quot;ve worked with.",
   },
   {
     name: "Mary Mettille",
@@ -59,9 +59,9 @@ export default function Testimonials() {
         <motion.div
               key={index}
               className={styles.testimonialCard}
-              initial={{ opacity: 0, x: 0, scale: 0.9 }} // ✅ Start fully centered
-              animate={{ opacity: 1, x: 0, scale: 1 }} // ✅ Keep it centered at all times
-              exit={{ opacity: 0, x: 0, scale: 0.9 }} // ✅ Exit centered as well
+              initial={{ opacity: 0, x: 0, scale: 0.9 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }} 
+              exit={{ opacity: 0, x: 0, scale: 0.9 }} 
               transition={{ duration: 0.5 }}
             >
             <p className={styles.quote}>"{testimonials[index].quote}"</p>

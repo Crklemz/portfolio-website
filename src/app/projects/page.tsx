@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "@/styles/Projects.module.css";
+import Image from "next/image";
 
 const projects = [
   {
@@ -38,7 +39,13 @@ export default function ProjectsPage() {
       <div className={styles.projectsGrid}>
         {projects.map((project, index) => (
           <div key={index} className={styles.projectCard}>
-            <img src={project.image} alt={project.title} className={styles.projectImage} />
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={300}
+              height={200}
+              className={styles.projectImage}
+            />
             <div className={styles.projectContent}>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
