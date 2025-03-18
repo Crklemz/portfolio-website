@@ -9,21 +9,18 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const testimonials = [
     {
         name: "Hunter Rancourt",
-        role: "Senior Full-Stack Engineer",
-        quote:
-            "Chris stands out as one of the nicest and kindest individuals I've ever met, effortlessly fitting in and forming connections with everyone he encounters.",
+        position: "Senior Full-Stack Engineer",
+        text: `I had the pleasure of working with Chris, and I can't recommend him highly enough as a software engineer. Chris stands out as one of the nicest and kindest individuals I've ever met, effortlessly fitting in and forming connections with everyone he encounters. His exceptional communication skills enable him to convey complex technical concepts clearly and effectively, regardless of the audience.`,
     },
     {
         name: "James Kelley",
-        role: "DevOps Engineer",
-        quote:
-            "His commitment to the team, work ethic, and communication is what really makes him shine and sets him apart from many people I've worked with.",
+        position: "DevOps Engineer",
+        text: `I’ve had the pleasure of working with Chris on several projects recently. His commitment to the team, work ethic, and communication is what really makes him shine and sets him apart from many people I’ve worked with.`,
     },
     {
         name: "Mary Mettille",
-        role: "React & Ruby on Rails Developer",
-        quote:
-            "Chris has a natural ability to break down tough problems into manageable steps. That skill takes years for most engineers, but it comes naturally to him!",
+        position: "React | Ruby on Rails Developer",
+        text: `I recently collaborated with Chris on a project and was particularly impressed by Chris's ability to handle even the toughest of problems by breaking everything down into manageable steps. That skill often takes years to develop among software engineers, but it seemed to come perfectly naturally to him. I'm looking forward to working with him again!`,
     },
 ];
 
