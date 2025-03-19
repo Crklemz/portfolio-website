@@ -89,6 +89,7 @@
 
   .carouselContainer {
     flex-direction: column;
+    background-color: black;
   }
 
   .quote {
