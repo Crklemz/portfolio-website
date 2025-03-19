@@ -1,4 +1,3 @@
-/* Testimonials Section */
 .testimonialsSection {
   padding: 4rem 2rem;
   text-align: center;
@@ -7,7 +6,6 @@
   border-radius: 12px;
   margin: 4rem auto;
   max-width: 800px;
-  /* Fixed height for the overall section */
   height: 550px;
   display: flex;
   flex-direction: column;
@@ -15,21 +13,18 @@
   justify-content: center;
 }
 
-/* Section Title */
 .sectionTitle {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-/* Subtitle */
 .sectionSubtitle {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 2rem;
 }
 
-/* Carousel Container */
 .carouselContainer {
   position: relative;
   width: 100%;
@@ -39,12 +34,9 @@
   justify-content: center;
 }
 
-/* Testimonial Card (fixed size) */
 .testimonialCard {
   width: 600px;
-  /* Fixed width */
   height: 350px;
-  /* Fixed height for the card */
   padding: 2rem;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
@@ -56,7 +48,6 @@
   transition: all 0.4s ease-in-out;
 }
 
-/* Testimonial Content: Center the text inside the fixed card */
 .testimonialContent {
   width: 100%;
   height: 100%;
@@ -66,7 +57,6 @@
   justify-content: center;
 }
 
-/* Quote */
 .quote {
   font-size: 1.2rem;
   font-style: italic;
@@ -77,20 +67,17 @@
   margin-bottom: 1rem;
 }
 
-/* Name */
 .name {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0.5rem 0;
 }
 
-/* Role */
 .role {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Arrows */
 .arrow {
   font-size: 2rem;
   cursor: pointer;
@@ -104,12 +91,14 @@
   opacity: 1;
 }
 
-/* (Optional) Mobile Responsive Styling */
 @media (max-width: 768px) {
   .testimonialsSection {
     height: auto;
-    /* Let the section adjust on small screens */
     padding: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
   }
 
   .carouselContainer {
@@ -121,11 +110,9 @@
     width: 90%;
     max-width: 100%;
     height: 430px;
-    /* Fixed height remains on mobile if desired */
     padding: 1rem;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.743);
-
   }
 
   .quote {
