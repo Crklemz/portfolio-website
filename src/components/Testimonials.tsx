@@ -10,7 +10,7 @@ const testimonials = [
   {
     name: `Hunter Rancourt`,
     role: `Senior Full-Stack Engineer`,
-    quote: `I had the pleasure of working with Chris, and I can't recommend him highly enough as a software engineer. Chris stands out as one of the nicest and kindest individuals I've ever met, effortlessly fitting in and forming connections with everyone he encounters. His exceptional communication skills enable him to convey complex technical concepts clearly and effectively, regardless of the audience.`,
+    quote: `Chris is incredibly reliable and consistently goes above and beyond in every task he's assigned. His hunger for knowledge and drive to continuously learn and grow set him apart from most engineers. His positive attitude and cheerful demeanor uplift the entire team, making him a joy to work with.`,
   },
   {
     name: `James Kelley`,
@@ -20,7 +20,7 @@ const testimonials = [
   {
     name: `Mary Mettille`,
     role: `React | Ruby on Rails Developer`,
-    quote: `I recently collaborated with Chris on a project and was particularly impressed by Chris's ability to handle even the toughest of problems by breaking everything down into manageable steps. That skill often takes years to develop among software engineers, but it seemed to come perfectly naturally to him. I'm looking forward to working with him again!`,
+    quote: `I was particularly impressed by Chris's ability to handle even the toughest of problems by breaking everything down into manageable steps. That skill often takes years to develop among software engineers.`,
   },
 ];
 
@@ -82,9 +82,11 @@ export default function Testimonials() {
             {...animationProps}
             transition={{ ease: "easeInOut", duration: 0.5 }}
           >
-            <p className={styles.quote}>&quot;{testimonials[index].quote}&quot;</p>
-            <h3 className={styles.name}>{testimonials[index].name}</h3>
-            <span className={styles.role}>{testimonials[index].role}</span>
+            <div className={styles.testimonialContent}>
+              <p className={styles.quote}>&quot;{testimonials[index].quote}&quot;</p>
+              <h3 className={styles.name}>{testimonials[index].name}</h3>
+              <span className={styles.role}>{testimonials[index].role}</span>
+            </div>
           </motion.div>
         </AnimatePresence>
 
