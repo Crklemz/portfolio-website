@@ -1,7 +1,9 @@
 /* Tech Stack Section */
 .techStack {
     text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Added spacing between elements */
 }
 
 /* Grid Layout */
@@ -46,10 +48,6 @@
 }
 
 @media (max-width: 768px) {
-  .techStack {
-    padding: 3rem 1rem;
-  }
-
   .techStack h2 {
     font-size: 2rem;
   }
