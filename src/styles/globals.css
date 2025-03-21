@@ -33,6 +33,12 @@
   /* 64px */
   --spacing-12: 6rem;
   /* 96px */
+  --page-padding: 0 0 2rem 0;
+  --page-padding-mobile: 0 0 .1rem 0;
+  --section-padding: 1rem;
+  --section-padding-mobile: 1rem;
+  --section-margin-y: 2rem 0;
+  --section-margin-y-mobile: 1rem 0;
 }
 
 /* Dark Mode */
@@ -50,9 +56,7 @@ body {
   font-family: var(--font-body);
   line-height: 1.6;
   transition: background 0.3s ease, color 0.3s ease;
-  padding-top: 70px;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 70px 0 0 0;
 }
 
 /* Typography */
@@ -141,26 +145,11 @@ label {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Utility Classes for Consistent Spacing */
-.section-padding {
-  padding: var(--spacing-8) var(--spacing-4);
-}
-
-.section-margin {
-  margin: var(--spacing-8) 0;
-}
-
 /* Use for Section Divider component only */
 .section-divider {
   width: 100%;
-  /* Fix horizontal overflow by using 100% instead of 100vw */
-  margin: var(--spacing-8) 0;
-  /* Add vertical spacing between sections */
-  padding: var(--spacing-4) 0;
-  /* Add padding to prevent elements from touching the border */
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
-  /* Ensure padding does not affect width */
 }
 
 /* Responsive Fixes */

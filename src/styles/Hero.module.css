@@ -5,9 +5,10 @@
   justify-content: center;
   text-align: center;
   min-height: 80vh;
-  padding: 2rem;
   position: relative;
   background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(102, 16, 242, 0.1));
+  padding: var(--section-padding);
+  margin-bottom: 3rem;
 }
 
 /* Hero Title */

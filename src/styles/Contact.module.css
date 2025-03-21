@@ -1,9 +1,10 @@
 /* Contact Section */
 .contactSection {
-  padding: 4rem 2rem;
   text-align: center;
   background: var(--background);
   color: var(--foreground);
+  padding: var(--section-padding);
+  margin: var(--section-margin-y);
 }
 
 /* Title & Subtitle */
@@ -95,7 +96,8 @@
 /* Mobile Responsive Styling */
 @media (max-width: 768px) {
   .contactSection {
-    padding: 3rem 1rem;
+    padding: var(--section-padding-mobile);
+    margin: var(--section-margin-y-mobile);
   }
 
   .contactTitle {

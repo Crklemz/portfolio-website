@@ -1,16 +1,16 @@
 .testimonialsSection {
-  padding: 4rem 2rem;
   text-align: center;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-radius: 12px;
-  margin: 4rem auto;
   max-width: 800px;
   height: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: var(--section-padding);
+  margin: var(--section-margin-y);
 }
 
 .sectionTitle {
@@ -94,7 +94,8 @@
 @media (max-width: 768px) {
   .testimonialsSection {
     height: auto;
-    padding: 2rem;
+    padding: var(--section-padding-mobile);
+    margin: var(--section-margin-y-mobile);
   }
 
   .sectionTitle {
