@@ -47,7 +47,7 @@ export default function ProjectsPage() {
               className={styles.projectImage}
             />
             <div className={styles.projectContent}>
-              <h3>{project.title}</h3>
+              <h3>Coming Soon! {project.title}</h3>
               <p>{project.description}</p>
               <ul className={styles.techList}>
                 {project.tech.map((tech, idx) => (
