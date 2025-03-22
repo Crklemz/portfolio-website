@@ -8,7 +8,7 @@ export default function ResumePage() {
                     Full-Stack Software Engineer | AI & Cloud Enthusiast
                 </p>
                 <p className="mt-4 text-lg">
-                    Experienced in JavaScript, TypeScript, React, Django, and cloud-based infrastructure.
+                Skilled in React, Django, Docker, WordPress, and CI/CD — I bridge front-end polish with back-end power. Clean code. Smooth launches. Happy users.
                 </p>
                 <div className="flex justify-center gap-4 mt-6">
                     <a href="mailto:crklemz@gmail.com" className="text-blue-600">📧 crklemz@gmail.com</a>
