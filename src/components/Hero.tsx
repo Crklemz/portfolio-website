@@ -7,6 +7,7 @@ import styles from "@/styles/Hero.module.css";
 export default function Hero() {
     return (
         <section className={styles.hero}>
+            <h1>This site is a work in progress — more updates coming soon!</h1>
             {/* Animated Intro Text */}
             <motion.h1
                 initial={{ opacity: 0, y: -20 }}
