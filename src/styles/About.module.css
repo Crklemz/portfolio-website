@@ -9,11 +9,13 @@
   padding: var(--page-padding);
   position: relative;
   min-height: 80vh;
+  gap: var(--spacing-6);
 }
 
 @media (max-width: 768px) {
   .aboutContainer {
     padding: var(--page-padding-mobile);
+    gap: var(--spacing-4);
   }
 }
 
@@ -36,15 +38,21 @@
   }
 }
 
-.contentCard {
-  max-width: 800px;
+.section {
   width: 100%;
+  max-width: 800px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: var(--spacing-6);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-4);
+  }
 }
 
 .title {
@@ -61,10 +69,6 @@
   line-height: 1.6;
   margin-bottom: var(--spacing-6);
   color: var(--foreground);
-}
-
-.section {
-  margin-bottom: var(--spacing-6);
 }
 
 .sectionTitle {
@@ -213,10 +217,6 @@
 
   .sectionTitle {
     font-size: 1.75rem;
-  }
-
-  .contentCard {
-    padding: var(--spacing-4);
   }
 
   .techGrid {

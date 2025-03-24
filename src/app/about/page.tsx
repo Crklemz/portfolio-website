@@ -87,79 +87,85 @@ export default function About() {
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.bgAccentEffect}></div>
-      <div className={styles.contentCard}>
+      
+      <section className={styles.section}>
         <h1 className={styles.title}>{aboutMe.title}</h1>
         <p className={styles.description}>
           {aboutMe.description}
         </p>
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>{techStack.title}</h2>
-          <div className={styles.techGrid}>
-            {techStack.languagesAndTools.map((tech, index) => {
-              const IconComponent = tech.icon;
-              return (
-                <div key={index} className={styles.techIcon}>
-                  <IconComponent className={`text-4xl ${tech.color}`} />
-                  <span className={styles.techLabel}>{tech.label}</span>
-                </div>
-              );
-            })}
-          </div>
-          <div className={styles.devHighlights}>
-            <h3 className={styles.sectionTitle}>{techStack.devHighlights.title}</h3>
-            <ul className={styles.highlightsList}>
-              {techStack.devHighlights.highlights.map((highlight, index) => (
-                <li key={index} className={styles.highlightItem}>{highlight}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>{outsideTheCode.title}</h2>
-          <p>
-            {outsideTheCode.description}
-          </p>
-        </section>
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Interests</h2>
-          <div className={styles.interestsGrid}>
-            {interests.map((interest, index) => (
-              <div key={index} className={styles.interestCard}>
-                <img
-                  src={interest.image}
-                  alt={interest.title}
-                  className={styles.interestImage}
-                />
-                <h3 className={styles.interestTitle}>{interest.title}</h3>
-                <p className={styles.interestDescription}>{interest.description}</p>
-                {interest.videoUrl && (
-                  <a
-                    href={interest.videoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.videoButton}
-                  >
-                    {interest.videoTitle}
-                  </a>
-                )}
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>{techStack.title}</h2>
+        <div className={styles.techGrid}>
+          {techStack.languagesAndTools.map((tech, index) => {
+            const IconComponent = tech.icon;
+            return (
+              <div key={index} className={styles.techIcon}>
+                <IconComponent className={`text-4xl ${tech.color}`} />
+                <span className={styles.techLabel}>{tech.label}</span>
               </div>
+            );
+          })}
+        </div>
+        <div className={styles.devHighlights}>
+          <h3 className={styles.sectionTitle}>{techStack.devHighlights.title}</h3>
+          <ul className={styles.highlightsList}>
+            {techStack.devHighlights.highlights.map((highlight, index) => (
+              <li key={index} className={styles.highlightItem}>{highlight}</li>
             ))}
-          </div>
-        </section>
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Inspiration</h2>
-          <blockquote className={styles.quote}>
-            "Your inspiring quote here..."
-          </blockquote>
-        </section>
-        <a
-          href="/ChristopherKlemzResume.pdf"
-          download
-          className="btn-primary"
-        >
-          Download Resume
-        </a>
-      </div>
+          </ul>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>{outsideTheCode.title}</h2>
+        <p>
+          {outsideTheCode.description}
+        </p>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Interests</h2>
+        <div className={styles.interestsGrid}>
+          {interests.map((interest, index) => (
+            <div key={index} className={styles.interestCard}>
+              <img
+                src={interest.image}
+                alt={interest.title}
+                className={styles.interestImage}
+              />
+              <h3 className={styles.interestTitle}>{interest.title}</h3>
+              <p className={styles.interestDescription}>{interest.description}</p>
+              {interest.videoUrl && (
+                <a
+                  href={interest.videoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.videoButton}
+                >
+                  {interest.videoTitle}
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Inspiration</h2>
+        <blockquote className={styles.quote}>
+          "Your inspiring quote here..."
+        </blockquote>
+      </section>
+
+      <a
+        href="/ChristopherKlemzResume.pdf"
+        download
+        className="btn-primary"
+      >
+        Download Resume
+      </a>
     </div>
   );
 }
