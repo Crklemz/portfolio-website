@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "@/styles/About.module.css";
 import {
   SiJavascript, SiTypescript, SiNextdotjs, SiRedux, SiDjango, SiSass, SiTailwindcss,
@@ -13,24 +14,24 @@ const interests = [
   {
     title: 'Music',
     description: 'Played in metal and jam bands for 12 years—showcasing creativity, teamwork, and commitment.',
-    image: 'https://img.youtube.com/vi/YZWZ3yCskt8/maxresdefault.jpg',
+    image: '/images/interests/music.jpg',
     videoUrl: 'https://www.youtube.com/watch?v=YZWZ3yCskt8',
     videoTitle: 'Watch Live Performance'
   },
   {
     title: 'Fatherhood',
     description: 'Proud father of 2 girls who inspire me every day.',
-    image: 'https://via.placeholder.com/300?text=Fatherhood',
+    image: '/images/interests/fatherhood.png',
   },
   {
     title: 'Formula 1',
     description: 'Passionate about the world of Formula 1 racing.',
-    image: 'https://via.placeholder.com/300?text=F1',
+    image: '/images/interests/formula1.jpg',
   },
   {
     title: 'Outdoor Adventures',
     description: 'Enjoy camping, water sports, and swimming—always seeking new adventures.',
-    image: 'https://via.placeholder.com/300?text=Outdoor+Adventures',
+    image: '/images/interests/outdoor-adventures.png',
   },
 ];
 
@@ -126,11 +127,17 @@ export default function About() {
         <div className={styles.interestsGrid}>
           {interests.map((interest, index) => (
             <div key={index} className={styles.interestCard}>
-              <img
-                src={interest.image}
-                alt={interest.title}
-                className={styles.interestImage}
-              />
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={interest.image}
+                  alt={interest.title}
+                  width={400}
+                  height={300}
+                  quality={100}
+                  className={styles.interestImage}
+                  priority={index === 0}
+                />
+              </div>
               <h3 className={styles.interestTitle}>{interest.title}</h3>
               <p className={styles.interestDescription}>{interest.description}</p>
               {interest.videoUrl && (

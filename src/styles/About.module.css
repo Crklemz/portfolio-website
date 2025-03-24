@@ -160,12 +160,23 @@
   transform: translateY(-5px);
 }
 
-.interestImage {
+.imageWrapper {
+  position: relative;
   width: 100%;
   height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
   margin-bottom: var(--spacing-3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.interestImage {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.interestCard:hover .interestImage {
+  transform: scale(1.05);
 }
 
 .interestTitle {
