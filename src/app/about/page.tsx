@@ -13,8 +13,8 @@ const interests = [
   {
     title: 'Music',
     description: 'Played in metal and jam bands for 12 years—showcasing creativity, teamwork, and commitment.',
-    image: 'https://via.placeholder.com/300?text=Music',
-    videoUrl: 'https://www.youtube.com/watch?v=YXfd4XvfP4Y',
+    image: 'https://img.youtube.com/vi/YZWZ3yCskt8/maxresdefault.jpg',
+    videoUrl: 'https://www.youtube.com/watch?v=YZWZ3yCskt8',
     videoTitle: 'Watch Live Performance'
   },
   {
