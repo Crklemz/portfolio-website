@@ -120,13 +120,9 @@ export default function About() {
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>{outsideTheCode.title}</h2>
-        <p>
+        <p className={styles.description}>
           {outsideTheCode.description}
         </p>
-      </section>
-
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Interests</h2>
         <div className={styles.interestsGrid}>
           {interests.map((interest, index) => (
             <div key={index} className={styles.interestCard}>

@@ -141,6 +141,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--spacing-5);
+  margin-top: var(--spacing-6);
 }
 
 .interestCard {
@@ -150,6 +151,9 @@
   padding: var(--spacing-4);
   text-align: center;
   transition: transform 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .interestCard:hover {
@@ -178,6 +182,7 @@
   color: var(--foreground);
   opacity: 0.8;
   margin-bottom: var(--spacing-4);
+  flex-grow: 1;
 }
 
 .videoButton {
