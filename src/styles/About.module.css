@@ -173,6 +173,27 @@
   font-size: 1rem;
   color: var(--foreground);
   opacity: 0.8;
+  margin-bottom: var(--spacing-4);
+}
+
+.videoButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: var(--background);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.videoButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
 }
 
 .quote {

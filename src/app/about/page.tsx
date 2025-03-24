@@ -14,6 +14,8 @@ const interests = [
     title: 'Music',
     description: 'Played in metal and jam bands for 12 years—showcasing creativity, teamwork, and commitment.',
     image: 'https://via.placeholder.com/300?text=Music',
+    videoUrl: 'https://www.youtube.com/watch?v=YXfd4XvfP4Y',
+    videoTitle: 'Watch Live Performance'
   },
   {
     title: 'Fatherhood',
@@ -130,6 +132,16 @@ export default function About() {
                 />
                 <h3 className={styles.interestTitle}>{interest.title}</h3>
                 <p className={styles.interestDescription}>{interest.description}</p>
+                {interest.videoUrl && (
+                  <a
+                    href={interest.videoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.videoButton}
+                  >
+                    {interest.videoTitle}
+                  </a>
+                )}
               </div>
             ))}
           </div>
