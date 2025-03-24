@@ -45,16 +45,6 @@ const outsideTheCode = {
   description: `When I'm not coding, I'm probably playing guitar (been jamming since I was 14), making homemade sourdough or mead, or crafting handmade archery bows from wood — yeah, I'm that guy. I've got two amazing daughters (2 and 6) and we love camping, swimming, and going to motorsport events like the sport bike and drag races at Brainerd International Raceway. Family, creativity, and being self-sufficient keep me grounded and inspired.`
 }
 
-const devHighlights = {
-  title: 'Dev Highlights',
-  highlights: [
-    'Built responsive front-ends and internal tools with React and Django',
-    'Modernized legacy apps and led full-stack feature development across multiple platforms',
-    'Integrated AWS services (Lambda, S3, CloudFront) for performance boosts',
-    'Automated deployments and reduced dev friction with Docker and GitHub Actions',
-  ]
-}
-
 export default function About() {
   return (
     <div className={styles.aboutContainer}>
@@ -107,14 +97,6 @@ export default function About() {
           ))}
         </div>
       </section>
-
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Inspiration</h2>
-        <blockquote className={styles.quote}>
-          Your inspiring quote here...
-        </blockquote>
-      </section>
-
       <a
         href="/ChristopherKlemzResume.pdf"
         download
