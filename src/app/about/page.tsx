@@ -158,7 +158,7 @@ export default function About() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Inspiration</h2>
         <blockquote className={styles.quote}>
-          "Your inspiring quote here..."
+          Your inspiring quote here...
         </blockquote>
       </section>
 
