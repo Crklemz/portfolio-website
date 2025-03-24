@@ -1,14 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "@/styles/About.module.css";
-import {
-  SiJavascript, SiTypescript, SiNextdotjs, SiRedux, SiDjango, SiSass, SiTailwindcss,
-  SiPostgresql, SiMysql, SiGooglecloud
-} from "react-icons/si";
-import {
-  FaPython, FaPhp, FaDatabase, FaReact, FaWordpress, FaNodeJs, FaHtml5, FaCss3,
-  FaAws, FaDocker, FaGithub
-} from "react-icons/fa";
+import TechStack from "@/components/TechStack";
 
 const interests = [
   {
@@ -52,40 +45,14 @@ const outsideTheCode = {
   description: `When I'm not coding, I'm probably playing guitar (been jamming since I was 14), making homemade sourdough or mead, or crafting handmade archery bows from wood — yeah, I'm that guy. I've got two amazing daughters (2 and 6) and we love camping, swimming, and going to motorsport events like the sport bike and drag races at Brainerd International Raceway. Family, creativity, and being self-sufficient keep me grounded and inspired.`
 }
 
-const techStack = {
-  title: 'Tech Stack',
-  languagesAndTools: [
-    { icon: SiJavascript, label: "JavaScript", color: "text-yellow-500" },
-    { icon: SiTypescript, label: "TypeScript", color: "text-blue-500" },
-    { icon: FaPython, label: "Python", color: "text-blue-600" },
-    { icon: FaPhp, label: "PHP", color: "text-purple-600" },
-    { icon: FaDatabase, label: "SQL", color: "text-gray-600" },
-    { icon: FaReact, label: "React", color: "text-blue-500" },
-    { icon: SiNextdotjs, label: "Next.js", color: "text-black dark:text-white" },
-    { icon: SiRedux, label: "Redux", color: "text-purple-500" },
-    { icon: FaWordpress, label: "WordPress", color: "text-blue-600" },
-    { icon: SiDjango, label: "Django", color: "text-green-600" },
-    { icon: FaNodeJs, label: "Node.js", color: "text-green-500" },
-    { icon: FaHtml5, label: "HTML", color: "text-orange-500" },
-    { icon: FaCss3, label: "CSS", color: "text-blue-500" },
-    { icon: SiSass, label: "SCSS", color: "text-pink-500" },
-    { icon: SiTailwindcss, label: "Tailwind CSS", color: "text-teal-400" },
-    { icon: SiPostgresql, label: "PostgreSQL", color: "text-blue-500" },
-    { icon: SiMysql, label: "MySQL", color: "text-blue-600" },
-    { icon: FaAws, label: "AWS", color: "text-orange-500" },
-    { icon: SiGooglecloud, label: "GCP", color: "text-blue-400" },
-    { icon: FaDocker, label: "Docker", color: "text-blue-600" },
-    { icon: FaGithub, label: "GitHub Actions", color: "text-gray-900 dark:text-white" },
-  ],
-  devHighlights: {
-    title: 'Dev Highlights',
-    highlights: [
-      'Built responsive front-ends and internal tools with React and Django',
-      'Modernized legacy apps and led full-stack feature development across multiple platforms',
-      'Integrated AWS services (Lambda, S3, CloudFront) for performance boosts',
-      'Automated deployments and reduced dev friction with Docker and GitHub Actions',
-    ]
-  }
+const devHighlights = {
+  title: 'Dev Highlights',
+  highlights: [
+    'Built responsive front-ends and internal tools with React and Django',
+    'Modernized legacy apps and led full-stack feature development across multiple platforms',
+    'Integrated AWS services (Lambda, S3, CloudFront) for performance boosts',
+    'Automated deployments and reduced dev friction with Docker and GitHub Actions',
+  ]
 }
 
 export default function About() {
@@ -102,26 +69,7 @@ export default function About() {
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>{techStack.title}</h2>
-        <div className={styles.techGrid}>
-          {techStack.languagesAndTools.map((tech, index) => {
-            const IconComponent = tech.icon;
-            return (
-              <div key={index} className={styles.techIcon}>
-                <IconComponent className={`text-4xl ${tech.color}`} />
-                <span className={styles.techLabel}>{tech.label}</span>
-              </div>
-            );
-          })}
-        </div>
-        <div className={styles.devHighlights}>
-          <h3 className={styles.sectionTitle}>{techStack.devHighlights.title}</h3>
-          <ul className={styles.highlightsList}>
-            {techStack.devHighlights.highlights.map((highlight, index) => (
-              <li key={index} className={styles.highlightItem}>{highlight}</li>
-            ))}
-          </ul>
-        </div>
+        <TechStack />
       </section>
 
       <section className={styles.section}>

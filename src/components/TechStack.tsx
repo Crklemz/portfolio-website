@@ -1,5 +1,7 @@
+"use client";
+
 import { motion } from "framer-motion";
-import styles from "@/styles/TechStack.module.css"; // ✅ Correct import
+import styles from "@/styles/TechStack.module.css";
 import {
     FaReact, FaNodeJs, FaPython, FaAws, FaDocker, FaGithub, FaPhp, FaDatabase,
     FaHtml5, FaCss3, FaWordpress
