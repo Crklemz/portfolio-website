@@ -68,7 +68,7 @@ export default function About() {
         />
       </section>
 
-      <section className={styles.section}>
+      <section id="tech-stack" className={styles.section}>
         <TechStack />
       </section>
 

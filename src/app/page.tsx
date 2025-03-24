@@ -1,7 +1,7 @@
 "use client";
 
 import Hero from "@/components/Hero";
-import TechStack from "@/components/TechStack";
+import HomeTechStack from "@/components/HomeTechStack";
 import ProjectsSection from "@/components/ProjectSection";
 import Testimonials from "@/components/Testimonials";
 import ContactSection from "@/components/ContactSection";
@@ -14,7 +14,7 @@ export default function Home() {
       <div className={styles.bgAccentEffect}></div>
       <Hero />
       <SectionDivider />
-      <TechStack />
+      <HomeTechStack />
       <SectionDivider />
       <ProjectsSection />
       <SectionDivider />
