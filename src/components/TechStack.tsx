@@ -35,6 +35,14 @@ const techStack = [
     { icon: FaGithub, label: "GitHub Actions", color: "text-gray-900 dark:text-white" },
 ];
 
+const devHighlights = [
+    'Developed responsive front-ends using React and customized WordPress themes, while building robust back-end systems with Django.',
+    'Modernized legacy applications and led full-stack feature development across diverse platforms.',
+    'Integrated AWS services (Lambda, S3, CloudFront) to enhance application performance.',
+    'Automated deployments and streamlined development processes using Docker and GitHub Actions.',
+    'Engineered dynamic web applications utilizing the LAMP stack (Linux, Apache, MySQL, PHP) to deliver scalable solutions.',
+];
+
 export default function TechStack() {
     return (
         <section className={styles.techStack}>
@@ -53,13 +61,28 @@ export default function TechStack() {
                             ease: "easeInOut",
                             repeat: Infinity,
                             repeatType: "reverse",
-                            delay: index * 0.1, // Slight stagger for better effect
+                            delay: index * 0.1,
                         }}
                     >
                         <Icon className={`${color}`} />
                         <span className={styles.techLabel}>{label}</span>
                     </motion.div>
                 ))}
+            </div>
+
+            <div className="mt-12 p-6 bg-white/5 backdrop-blur-sm rounded-lg text-left">
+                <h3 className="text-xl font-bold mb-4 text-center">Development Highlights</h3>
+                <ul className="space-y-3">
+                    {devHighlights.map((highlight, index) => (
+                        <li 
+                            key={index} 
+                            className="flex items-start"
+                        >
+                            <span className="text-primary mr-2">•</span>
+                            {highlight}
+                        </li>
+                    ))}
+                </ul>
             </div>
         </section>
     );
