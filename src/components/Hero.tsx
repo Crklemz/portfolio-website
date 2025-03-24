@@ -34,6 +34,9 @@ export default function Hero() {
                     <Link href="/projects" className="btn-primary">View My Work</Link>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
+                    <Link href="/about" className="btn-secondary">Learn More About Me</Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
                     <Link href="/contact" className="btn-secondary">Contact Me</Link>
                 </motion.div>
             </div>
