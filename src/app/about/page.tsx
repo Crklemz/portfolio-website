@@ -39,6 +39,10 @@ const aboutMe = {
   title: 'About Me',
   description: `Hey, I'm Chris — a Full-Stack Software Engineer who's all in on building powerful, user-focused web experiences.
 Back in the early days of the pandemic, I hit a crossroads. I was managing projects in IT security but felt disconnected from what I was doing. So I made a bold decision: I took a pay cut to pursue what truly lights me up — solving complex problems through code and building things that make life and business better.
+
+<span class="${styles.handwrittenQuote}">"Go confidently in the direction of your dreams. Live the life you have imagined."</span>
+<span class="${styles.quoteAttribution}">— Henry David Thoreau</span>
+
 Since then, I've poured myself into full-stack development, gaining deep experience across React, Django, PHP/WordPress, and DevOps tools like Docker and GitHub Actions. At Capitol Information Group, I've tackled 12+ applications, rapidly mastering new stacks and surprising even the CIO with my ability to absorb and apply technical knowledge at speed. They called me a sponge — in the best way possible.
 But I'm not just about code. I'm about people. My teammates say I bring strong communication, teamwork, and positive energy to every collaboration. I believe in transparency, continuous learning, and putting in the work. I've also used AI tools like ChatGPT and GitHub Copilot to streamline development and solve real business challenges.`
 }
@@ -91,9 +95,10 @@ export default function About() {
       
       <section className={styles.section}>
         <h1 className={styles.title}>{aboutMe.title}</h1>
-        <p className={styles.description}>
-          {aboutMe.description}
-        </p>
+        <div 
+          className={styles.description}
+          dangerouslySetInnerHTML={{ __html: aboutMe.description }}
+        />
       </section>
 
       <section className={styles.section}>

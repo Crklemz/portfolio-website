@@ -71,6 +71,27 @@
   color: var(--foreground);
 }
 
+.handwrittenQuote {
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin: var(--spacing-4) 0;
+  text-align: center;
+  line-height: 1.4;
+  display: block;
+}
+
+.quoteAttribution {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--foreground);
+  opacity: 0.8;
+  text-align: center;
+  display: block;
+  margin-bottom: var(--spacing-4);
+  font-style: italic;
+}
+
 .sectionTitle {
   font-family: var(--font-heading);
   font-size: 2rem;
