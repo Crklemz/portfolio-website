@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -24,7 +24,7 @@ export default function Footer() {
       {/* Social Icons */}
       <div className="flex justify-center space-x-6 mb-4">
         <a 
-          href="https://github.com/yourusername" 
+          href="https://github.com/crklemz" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-2xl text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
@@ -32,7 +32,7 @@ export default function Footer() {
           <FaGithub />
         </a>
         <a 
-          href="https://linkedin.com/in/yourusername" 
+          href="https://linkedin.com/in/chris-klemz" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-2xl text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
@@ -40,15 +40,7 @@ export default function Footer() {
           <FaLinkedin />
         </a>
         <a 
-          href="https://twitter.com/yourusername" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="text-2xl text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
-        >
-          <FaTwitter />
-        </a>
-        <a 
-          href="mailto:your.email@example.com"
+          href="mailto:crklemz@gmail.com"
           className="text-2xl text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
         >
           <FaEnvelope />
