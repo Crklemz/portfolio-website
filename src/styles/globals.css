@@ -137,13 +137,6 @@ label {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Use for Section Divider component only */
-.section-divider {
-  width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-sizing: border-box;
-}
-
 /* Section Card Styles */
 .section {
   width: 100%;
