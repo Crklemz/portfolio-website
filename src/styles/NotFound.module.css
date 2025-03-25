@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  background: var(--background);
+  color: var(--foreground);
+  padding: 0 1.5rem;
+}
+
+.title {
+  font-size: 3.75rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--secondary);
+  margin-top: 0.5rem;
+}
+
+.buttonContainer {
+  margin-top: 1.5rem;
+}
+
+.imageContainer {
+  margin-top: 2.5rem;
+} 
