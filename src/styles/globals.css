@@ -2,11 +2,11 @@
 
 /* Define Theme Variables */
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --primary: #007bff;
-  --secondary: #6c757d;
-  --accent: #64ffda;
+  --background: #2d2b30;
+  --foreground: #ebdad9;
+  --primary: #3574a9;
+  --secondary: #255a85;
+  --accent: #c3b4af;
 
   /* Google Fonts */
   --font-heading: var(--font-space-grotesk);
@@ -108,7 +108,7 @@ label {
 
 /* Button Styles */
 .btn-primary {
-  background: linear-gradient(to right, var(--primary), #6610f2);
+  background: linear-gradient(to right, var(--primary), var(--secondary));
   color: white;
   font-weight: bold;
   padding: 12px 24px;
@@ -148,7 +148,7 @@ label {
 .section {
   width: 100%;
   max-width: 800px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--background);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
