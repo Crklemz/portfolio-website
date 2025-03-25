@@ -1,8 +1,7 @@
 "use client";
 
-import styles from "@/styles/Projects.module.css";
+import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 
 // Sample Project Data
 const projects = [
@@ -32,39 +31,29 @@ const projects = [
     },
   ];
 
-export default function ProjectsSection() {
+export default function ProjectSection() {
     return (
-        <section className={`${styles.projectsSection} section`}>
-            <h2>Featured Projects</h2>
-            <p>Check out some of my latest work.</p>
-
-            <div className={styles.projectsGrid}>
-                {projects.map((project, index) => (
-                    <div key={index} className={styles.projectCard}>
-                        <Image
-                            src={project.image}
-                            alt={project.title}
-                            width={300}
-                            height={200}
-                            className={styles.projectImage}
-                        />            <div className={styles.projectContent}>
-                            <h3>Coming Soon! {project.title}</h3>
-                            <p>{project.description}</p>
-                            <ul className={styles.techList}>
-                                {project.tech.map((tech, idx) => (
-                                    <li key={idx}>{tech}</li>
-                                ))}
-                            </ul>
-                            <div className={styles.projectLinks}>
-                                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">Live Demo</a>
-                                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub</a>
-                            </div>
+        <section className="w-full py-16 px-4">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="max-w-4xl mx-auto"
+            >
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Featured Projects</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {projects.map((project, index) => (
+                        <div key={index} className="bg-white/5 backdrop-blur-md rounded-xl p-6">
+                            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                            <p className="mb-4">{project.description}</p>
+                            <Link href="/projects" className="btn-secondary inline-block">
+                                View Project
+                            </Link>
                         </div>
-                    </div>
-                ))}
-            </div>
-
-            <Link href="/projects" className="btn-primary mt-6">View More Projects</Link>
+                    ))}
+                </div>
+            </motion.div>
         </section>
     );
 }

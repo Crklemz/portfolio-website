@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import styles from "@/styles/About.module.css";
 import TechStack from "@/components/TechStack";
 
 const interests = [
@@ -33,8 +32,8 @@ const aboutMe = {
   description: `Hey, I'm Chris — a Full-Stack Software Engineer who's all in on building powerful, user-focused web experiences.
 Back in the early days of the pandemic, I hit a crossroads. I was managing projects in IT security but felt disconnected from what I was doing. So I made a bold decision: I took a pay cut to pursue what truly lights me up — solving complex problems through code and building things that make life and business better.
 
-<span class="${styles.handwrittenQuote}">"Go confidently in the direction of your dreams. Live the life you have imagined."</span>
-<span class="${styles.quoteAttribution}">— Henry David Thoreau</span>
+<span class="font-handwriting text-2xl italic text-primary">"Go confidently in the direction of your dreams. Live the life you have imagined."</span>
+<span class="text-sm text-gray-500">— Henry David Thoreau</span>
 
 Since then, I've poured myself into full-stack development, gaining deep experience across React, Django, PHP/WordPress, and DevOps tools like Docker and GitHub Actions. At Capitol Information Group, I've tackled 12+ applications, rapidly mastering new stacks and surprising even the CIO with my ability to absorb and apply technical knowledge at speed. They called me a sponge — in the best way possible.
 But I'm not just about code. I'm about people. My teammates say I bring strong communication, teamwork, and positive energy to every collaboration. I believe in transparency, continuous learning, and putting in the work. I've also used AI tools like ChatGPT and GitHub Copilot to streamline development and solve real business challenges.`
@@ -47,48 +46,46 @@ const outsideTheCode = {
 
 export default function About() {
   return (
-    <div className={styles.aboutContainer}>
-      <div className={styles.bgAccentEffect}></div>
+    <div className="relative min-h-screen py-16 px-4">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 pointer-events-none"></div>
       
-      <section className={styles.section}>
-        <h1 className={styles.title}>{aboutMe.title}</h1>
+      <section className="max-w-4xl mx-auto mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-8">{aboutMe.title}</h1>
         <div 
-          className={styles.description}
+          className="prose prose-lg dark:prose-invert max-w-none"
           dangerouslySetInnerHTML={{ __html: aboutMe.description }}
         />
       </section>
 
-      <section id="tech-stack" className={styles.section}>
+      <section id="tech-stack" className="max-w-4xl mx-auto mb-16">
         <TechStack />
       </section>
 
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>{outsideTheCode.title}</h2>
-        <p className={styles.description}>
+      <section className="max-w-4xl mx-auto mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8">{outsideTheCode.title}</h2>
+        <p className="prose prose-lg dark:prose-invert mb-12">
           {outsideTheCode.description}
         </p>
-        <div className={styles.interestsGrid}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {interests.map((interest, index) => (
-            <div key={index} className={styles.interestCard}>
-              <div className={styles.imageWrapper}>
+            <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6">
+              <div className="relative aspect-video mb-4">
                 <Image
                   src={interest.image}
                   alt={interest.title}
-                  width={400}
-                  height={300}
-                  quality={100}
-                  className={styles.interestImage}
+                  fill
+                  className="object-cover rounded-lg"
                   priority={index === 0}
                 />
               </div>
-              <h3 className={styles.interestTitle}>{interest.title}</h3>
-              <p className={styles.interestDescription}>{interest.description}</p>
+              <h3 className="text-xl font-bold mb-2">{interest.title}</h3>
+              <p className="mb-4">{interest.description}</p>
               {interest.videoUrl && (
                 <a
                   href={interest.videoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={styles.videoButton}
+                  className="btn-secondary inline-block"
                 >
                   {interest.videoTitle}
                 </a>
@@ -97,13 +94,15 @@ export default function About() {
           ))}
         </div>
       </section>
-      <a
-        href="/ChristopherKlemzResume.pdf"
-        download
-        className="btn-primary"
-      >
-        Download Resume
-      </a>
+      <div className="max-w-4xl mx-auto text-center">
+        <a
+          href="/ChristopherKlemzResume.pdf"
+          download
+          className="btn-primary inline-block"
+        >
+          Download Resume
+        </a>
+      </div>
     </div>
   );
 }

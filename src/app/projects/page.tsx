@@ -1,6 +1,5 @@
 "use client";
 
-import styles from "@/styles/Projects.module.css";
 import Image from "next/image";
 
 const projects = [
@@ -32,35 +31,40 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className={styles.projectsPage}>
-      <h1 className={styles.pageTitle}>Projects</h1>
-      <p className={styles.pageSubtitle}>Here are some projects I&apos;ve built recently.</p>
+    <div className="min-h-screen py-16 px-4">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Projects</h1>
+        <p className="text-xl mb-12">Here are some projects I&apos;ve built recently.</p>
 
-      <div className={styles.projectsGrid}>
-        {projects.map((project, index) => (
-          <div key={index} className={styles.projectCard}>
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={300}
-              height={200}
-              className={styles.projectImage}
-            />
-            <div className={styles.projectContent}>
-              <h3>Coming Soon! {project.title}</h3>
-              <p>{project.description}</p>
-              <ul className={styles.techList}>
-                {project.tech.map((tech, idx) => (
-                  <li key={idx}>{tech}</li>
-                ))}
-              </ul>
-              <div className={styles.projectLinks}>
-                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">Live Demo</a>
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub</a>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden">
+              <div className="relative aspect-video">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-4">Coming Soon! {project.title}</h3>
+                <p className="mb-4">{project.description}</p>
+                <ul className="flex flex-wrap gap-2 mb-6">
+                  {project.tech.map((tech, idx) => (
+                    <li key={idx} className="px-3 py-1 bg-white/10 rounded-full text-sm">
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex gap-4">
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">Live Demo</a>
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub</a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

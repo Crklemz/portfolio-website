@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import styles from "@/styles/TechStack.module.css";
 import {
     FaReact, FaNodeJs, FaPython, FaAws, FaDocker, FaGithub, FaPhp, FaDatabase,
     FaHtml5, FaCss3, FaWordpress
@@ -45,15 +44,15 @@ const devHighlights = [
 
 export default function TechStack() {
     return (
-        <section className={styles.techStack}>
-            <h2>My Tech Stack</h2>
-            <p>Technologies I use to build scalable and high-performance applications.</p>
+        <section className="w-full py-8">
+            <h2 className="text-3xl font-bold text-center mb-4">My Tech Stack</h2>
+            <p className="text-center mb-8">Technologies I use to build scalable and high-performance applications.</p>
 
-            <div className={styles.techGrid}>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 {techStack.map(({ icon: Icon, label, color }, index) => (
                     <motion.div
                         key={index}
-                        className={styles.techIcon}
+                        className="flex flex-col items-center p-4 bg-white/5 backdrop-blur-sm rounded-lg"
                         initial={{ y: 0 }}
                         animate={{ y: [0, -5, 0] }}
                         transition={{
@@ -64,8 +63,8 @@ export default function TechStack() {
                             delay: index * 0.1,
                         }}
                     >
-                        <Icon className={`${color}`} />
-                        <span className={styles.techLabel}>{label}</span>
+                        <Icon className={`text-3xl ${color} mb-2`} />
+                        <span className="text-sm text-center">{label}</span>
                     </motion.div>
                 ))}
             </div>

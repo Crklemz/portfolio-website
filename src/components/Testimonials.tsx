@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import styles from "@/styles/Testimonials.module.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 // Testimonials Data
@@ -72,31 +71,28 @@ export default function Testimonials() {
       };
 
   return (
-    <section className={`${styles.testimonialsSection} section`}>
-      <h2 className={styles.sectionTitle}>What Others Say About Me</h2>
-      <p className={styles.sectionSubtitle}>
-        Feedback from colleagues & collaborators
-      </p>
-      <div className={styles.carouselContainer}>
-        <FaChevronLeft className={styles.arrow} onClick={prevTestimonial} />
-
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            className={styles.testimonialCard}
-            {...animationProps}
-            transition={{ ease: "easeInOut", duration: 0.5 }}
-          >
-            <div className={styles.testimonialContent}>
-              <p className={styles.quote}>&quot;{testimonials[index].quote}&quot;</p>
-              <h3 className={styles.name}>{testimonials[index].name}</h3>
-              <span className={styles.role}>{testimonials[index].role}</span>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-
-        <FaChevronRight className={styles.arrow} onClick={nextTestimonial} />
-      </div>
+    <section className="w-full py-16 px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="max-w-4xl mx-auto"
+      >
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">What People Say</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Testimonial 1 */}
+          <div className="bg-white/5 backdrop-blur-md rounded-xl p-6">
+            <p className="text-lg mb-4">"Chris is an exceptional developer who delivered beyond our expectations. His attention to detail and technical expertise made our project a success."</p>
+            <p className="font-bold">- John Doe, CEO</p>
+          </div>
+          {/* Testimonial 2 */}
+          <div className="bg-white/5 backdrop-blur-md rounded-xl p-6">
+            <p className="text-lg mb-4">"Working with Chris was a pleasure. He's professional, responsive, and produces high-quality code."</p>
+            <p className="font-bold">- Jane Smith, Project Manager</p>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

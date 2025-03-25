@@ -1,38 +1,59 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import styles from "@/styles/Navbar.module.css";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  return (
-    <nav className={styles.navbar}>
-      <Link href="/" className={styles.navbarLogo}>Chris Klemz</Link>
+    return (
+        <nav className="w-full h-[70px] flex items-center justify-between px-8 fixed top-0 left-0 bg-[#2d2b30] shadow-lg z-50 border-b border-white/30">
+            {/* Logo */}
+            <Link href="/" className="text-3xl font-bold text-[#ebdad9]">
+                CK
+            </Link>
 
-      {/* Desktop Links */}
-      <div className={styles.navLinks}>
-        <Link href="/projects">Projects</Link>
-        <Link href="/about">About</Link>
-        <Link href="/resume">Resume</Link>
-        <Link href="/contact">Contact</Link>
-      </div>
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex gap-6">
+                <Link href="/" className="text-lg text-[#ebdad9] hover:text-[#3574a9] transition-colors">
+                    Home
+                </Link>
+                <Link href="/about" className="text-lg text-[#ebdad9] hover:text-[#3574a9] transition-colors">
+                    About
+                </Link>
+                <Link href="/projects" className="text-lg text-[#ebdad9] hover:text-[#3574a9] transition-colors">
+                    Projects
+                </Link>
+                <Link href="/contact" className="text-lg text-[#ebdad9] hover:text-[#3574a9] transition-colors">
+                    Contact
+                </Link>
+            </div>
 
-      {/* Hamburger Menu (Hidden on Desktop) */}
-      <div className={styles.menuIcon} onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <FaTimes /> : <FaBars />}
-      </div>
+            {/* Mobile Menu Button */}
+            <button 
+                className="md:hidden text-4xl cursor-pointer text-[#ebdad9]"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+                ☰
+            </button>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className={styles.mobileMenu}>
-          <Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
-          <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
-          <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
-        </div>
-      )}
-    </nav>
-  );
+            {/* Mobile Menu */}
+            {isMenuOpen && (
+                <div className="absolute top-[60px] left-0 w-full bg-[#2d2b30] p-4 shadow-lg md:hidden">
+                    <Link href="/" className="block py-4 text-center text-xl text-[#ebdad9] hover:text-[#3574a9] transition-colors">
+                        Home
+                    </Link>
+                    <Link href="/about" className="block py-4 text-center text-xl text-[#ebdad9] hover:text-[#3574a9] transition-colors">
+                        About
+                    </Link>
+                    <Link href="/projects" className="block py-4 text-center text-xl text-[#ebdad9] hover:text-[#3574a9] transition-colors">
+                        Projects
+                    </Link>
+                    <Link href="/contact" className="block py-4 text-center text-xl text-[#ebdad9] hover:text-[#3574a9] transition-colors">
+                        Contact
+                    </Link>
+                </div>
+            )}
+        </nav>
+    );
 }

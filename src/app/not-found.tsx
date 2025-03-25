@@ -1,17 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "@/styles/NotFound.module.css";
 
 export default function NotFound() {
     return (
-        <div className={styles.container}>
-            <h1 className={styles.title}>404</h1>
-            <p className={styles.subtitle}>Oops! Looks like you're lost.</p>
-            <p className={styles.description}>The page you're looking for doesn't exist.</p>
-            <div className={styles.buttonContainer}>
+        <div className="flex flex-col items-center justify-center min-h-screen text-center bg-[#2d2b30] text-[#ebdad9] px-6">
+            <h1 className="text-6xl font-bold">404</h1>
+            <p className="text-xl mt-4">Oops! Looks like you're lost.</p>
+            <p className="text-base text-[#255a85] mt-2">The page you're looking for doesn't exist.</p>
+            <div className="mt-6">
                 <Link href="/" className="btn-primary">Go Home</Link>
             </div>
-            <div className={styles.imageContainer}>
+            <div className="mt-10">
                 <Image src="/404-illustration.svg" alt="Lost astronaut" width={300} height={300} />
             </div>
         </div>

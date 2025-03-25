@@ -1,165 +1,56 @@
 @import "tailwindcss";
 
-/* Define Theme Variables */
 :root {
   --background: #2d2b30;
   --foreground: #ebdad9;
   --primary: #3574a9;
   --secondary: #255a85;
   --accent: #c3b4af;
-
-  /* Google Fonts */
-  --font-heading: var(--font-space-grotesk);
-  --font-body: var(--font-work-sans);
-  --font-mono: var(--font-fira-code);
-
-  /* Define Spacing Variables */
-  --spacing-0: 0;
-  --spacing-1: 0.25rem;
-  /* 4px */
-  --spacing-2: 0.5rem;
-  /* 8px */
-  --spacing-3: 0.75rem;
-  /* 12px */
-  --spacing-4: 1rem;
-  /* 16px */
-  --spacing-5: 1.5rem;
-  /* 24px */
-  --spacing-6: 2rem;
-  /* 32px */
-  --spacing-8: 3rem;
-  /* 48px */
-  --spacing-10: 4rem;
-  /* 64px */
-  --spacing-12: 6rem;
-  /* 96px */
-  --page-padding: 0 0 2rem 0;
-  --page-padding-mobile: 0 0 .1rem 0;
-  --section-padding: 1rem;
-  --section-padding-mobile: 1rem;
-  --section-margin-y: 2rem 0;
-  --section-margin-y-mobile: 1rem 0;
 }
 
-/* Apply Global Styles */
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-body);
-  line-height: 1.6;
-  transition: background 0.3s ease, color 0.3s ease;
-  padding: 70px 0 0 0;
-}
+@layer base {
+  body {
+    @apply bg-[#2d2b30] text-[#ebdad9] leading-relaxed transition-colors duration-300 pt-[70px];
+    font-family: var(--font-work-sans);
+  }
 
-/* Typography */
-h1,
-h2,
-h3 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-}
+  h1, h2, h3 {
+    @apply font-bold;
+    font-family: var(--font-space-grotesk);
+  }
 
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--foreground);
-}
-
-code {
-  font-family: var(--font-mono);
-  background: rgba(0, 0, 0, 0.05);
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-
-/* Form Elements */
-input,
-textarea {
-  border: 1px solid var(--secondary);
-  padding: 10px;
-  border-radius: 6px;
-  width: 100%;
-  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-label {
-  font-weight: bold;
-  color: var(--foreground);
-}
-
-/* Button Styles */
-.btn-primary {
-  background: linear-gradient(to right, var(--primary), var(--secondary));
-  color: white;
-  font-weight: bold;
-  padding: 12px 24px;
-  border-radius: 8px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-primary:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.btn-secondary {
-  background: var(--secondary);
-  color: white;
-  font-weight: bold;
-  padding: 12px 24px;
-  border-radius: 8px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-secondary:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Section Card Styles */
-.section {
-  width: 100%;
-  max-width: 800px;
-  background: var(--background);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-}
-
-@media (max-width: 768px) {
   h1 {
-    font-size: 2rem;
+    @apply text-4xl md:text-5xl;
   }
 
   h2 {
-    font-size: 1.75rem;
+    @apply text-3xl md:text-4xl;
   }
 
-  .btn-primary,
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  p {
+    @apply text-base font-normal text-[#ebdad9];
+  }
+
+  code {
+    @apply bg-black/5 px-2 py-1 rounded;
+    font-family: var(--font-fira-code);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-[#3574a9] to-[#255a85] text-white font-bold px-6 py-3 rounded-lg shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl;
+  }
+
   .btn-secondary {
-    width: 100%;
-    text-align: center;
+    @apply bg-[#255a85] text-white font-bold px-6 py-3 rounded-lg shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl;
+  }
+
+  .section {
+    @apply w-full max-w-3xl bg-[#2d2b30] backdrop-blur-md rounded-xl shadow-lg z-10;
   }
 }
