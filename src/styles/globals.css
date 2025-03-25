@@ -10,7 +10,7 @@
 
 @layer base {
   body {
-    @apply bg-[#2d2b30] text-[#ebdad9] leading-relaxed transition-colors duration-300 pt-[70px];
+    @apply bg-[var(--background)] text-[var(--foreground)] leading-relaxed transition-colors duration-300 pt-[70px];
     font-family: var(--font-work-sans);
   }
 
@@ -32,7 +32,7 @@
   }
 
   p {
-    @apply text-base font-normal text-[#ebdad9];
+    @apply text-base font-normal text-[var(--foreground)];
   }
 
   code {
@@ -43,14 +43,14 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-[#3574a9] to-[#255a85] text-white font-bold px-6 py-3 rounded-lg shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl;
+    @apply bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white font-bold px-6 py-3 rounded-lg shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl;
   }
 
   .btn-secondary {
-    @apply bg-[#255a85] text-white font-bold px-6 py-3 rounded-lg shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl;
+    @apply bg-[var(--secondary)] text-white font-bold px-6 py-3 rounded-lg shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl;
   }
 
   .section {
-    @apply w-full max-w-3xl bg-[#2d2b30] backdrop-blur-md rounded-xl shadow-lg z-10;
+    @apply w-full max-w-3xl bg-[var(--background)] backdrop-blur-md rounded-xl shadow-lg z-10;
   }
 }

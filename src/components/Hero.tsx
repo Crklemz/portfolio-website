@@ -23,7 +23,7 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="text-xl md:text-2xl text-center mb-8 text-[#ebdad9]/80"
+                className="text-xl md:text-2xl text-center mb-8 text-[var(--foreground)]/80"
             >
                 Full-Stack Developer | AI Enthusiast | Cloud Engineer
             </motion.p>
