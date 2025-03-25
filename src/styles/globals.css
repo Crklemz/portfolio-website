@@ -152,7 +152,17 @@ label {
   box-sizing: border-box;
 }
 
-/* Responsive Fixes */
+/* Section Card Styles */
+.section {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;

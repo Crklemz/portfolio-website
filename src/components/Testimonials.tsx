@@ -15,7 +15,7 @@ const testimonials = [
   {
     name: `James Kelley`,
     role: `DevOps Engineer`,
-    quote: `I’ve had the pleasure of working with Chris on several projects recently. His commitment to the team, work ethic, and communication is what really makes him shine and sets him apart from many people I’ve worked with.`,
+    quote: `I've had the pleasure of working with Chris on several projects recently. His commitment to the team, work ethic, and communication is what really makes him shine and sets him apart from many people I've worked with.`,
   },
   {
     name: `Mary Mettille`,
@@ -72,7 +72,7 @@ export default function Testimonials() {
       };
 
   return (
-    <section className={styles.testimonialsSection}>
+    <section className={`${styles.testimonialsSection} section`}>
       <h2 className={styles.sectionTitle}>What Others Say About Me</h2>
       <p className={styles.sectionSubtitle}>
         Feedback from colleagues & collaborators

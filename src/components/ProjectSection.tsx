@@ -34,7 +34,7 @@ const projects = [
 
 export default function ProjectsSection() {
     return (
-        <section className={styles.projectsSection}>
+        <section className={`${styles.projectsSection} section`}>
             <h2>Featured Projects</h2>
             <p>Check out some of my latest work.</p>
 

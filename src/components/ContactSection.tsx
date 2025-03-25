@@ -6,7 +6,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function ContactSection() {
   return (
-    <section className={styles.contactSection} id="contact">
+    <section className={`${styles.contactSection} section`} id="contact">
       <motion.h2
         className={styles.contactTitle}
         initial={{ opacity: 0, y: 20 }}
