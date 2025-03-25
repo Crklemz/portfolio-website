@@ -24,7 +24,7 @@ const interests = [
   {
     title: 'Outdoor Adventures',
     description: 'Enjoy camping, water sports, and swimming—always seeking new adventures.',
-    image: '/images/interests/outdoor-adventures.png',
+    image: '/images/interests/boating.png',
   },
 ];
 
