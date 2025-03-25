@@ -22,6 +22,11 @@ const testimonials = [
     role: `React | Ruby on Rails Developer`,
     quote: `I was particularly impressed by Chris's ability to handle even the toughest of problems by breaking everything down into manageable steps. That skill often takes years to develop among software engineers.`,
   },
+  {
+    name: `Francesco Catanzaro`,
+    role: `CIO at Capitol Information Group, Inc.`,
+    quote: `From the moment I hired Chris he was ready to learn and make solid decisions. What impressed me most from the get-go was his stellar work ethic, closely followed by his constant ability to keep learning and broadening his skillset. Wherever Chris goes next, I am certain he will quickly become indispensable.`
+  }
 ];
 
 export default function Testimonials() {
