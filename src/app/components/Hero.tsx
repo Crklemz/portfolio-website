@@ -27,11 +27,11 @@ const content = {
 
 export default function Hero() {
     return (
-        <section className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center py-12 sm:py-16 lg:py-20 overflow-hidden bg-[var(--background)]">
+        <section className="relative min-h-[calc(100vh-4rem)] w-full flex flex-col items-center justify-center py-12 sm:py-16 lg:py-20 overflow-hidden bg-[var(--background)]">
             {/* Background Elements */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/60 via-[var(--secondary)]/60 to-[var(--primary)]/60" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,var(--primary),transparent_80%)] opacity-80" />
-            <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-80 [filter:invert(1)_sepia(1)_saturate(1000%)_hue-rotate(180deg)_brightness(1)_contrast(1)]" />
+            <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-[var(--primary)]/60 via-[var(--secondary)]/60 to-[var(--primary)]/60" />
+            <div className="absolute inset-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,var(--primary),transparent_80%)] opacity-80" />
+            <div className="absolute inset-0 w-full h-full bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-80 [filter:invert(1)_sepia(1)_saturate(1000%)_hue-rotate(180deg)_brightness(1)_contrast(1)]" />
             
             {/* Animated Gradient Orbs */}
             <motion.div
@@ -63,12 +63,12 @@ export default function Hero() {
             />
             
             {/* Content */}
-            <div className="relative w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col items-center">
                 <motion.h1
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-6 leading-tight"
+                    className="text-4xl sm:text-5xl lg:text-7xl font-bold text-center mb-6 leading-tight"
                 >
                     {content.title}
                 </motion.h1>
