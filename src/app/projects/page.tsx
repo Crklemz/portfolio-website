@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { projects } from "../data/projects";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 const fadeInUp = {
@@ -20,7 +20,7 @@ const staggerContainer = {
   }
 };
 
-export default function ProjectsPage() {
+function ProjectsContent() {
   const searchParams = useSearchParams();
   const projectId = searchParams.get('project');
 
@@ -122,5 +122,13 @@ export default function ProjectsPage() {
         </motion.div>
       </div>
     </div>
+  );
+}
+
+export default function ProjectsPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProjectsContent />
+    </Suspense>
   );
 }
