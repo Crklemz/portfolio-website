@@ -50,7 +50,7 @@ export default function ContactSection() {
                     Get in Touch
                 </h2>
                 <p className="text-xl mb-12 text-[var(--foreground)]/80 max-w-2xl mx-auto">
-                    I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+                    I&apos;m always open to discussing new projects, creative ideas or opportunities to be part of your visions.
                 </p>
                 <Link 
                     href="/contact" 

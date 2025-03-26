@@ -40,7 +40,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((testimonial, idx) => (
             <div key={idx} className="bg-white/5 backdrop-blur-md rounded-xl p-6">
-              <p className="text-lg mb-4">"{testimonial.quote}"</p>
+              <p className="text-lg mb-4">&quot;{testimonial.quote}&quot;</p>
               <div>
                 <p className="font-bold">{testimonial.name}</p>
                 <p className="text-sm text-gray-400">{testimonial.role}</p>
