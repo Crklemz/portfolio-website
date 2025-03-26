@@ -1,8 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 // Testimonials Data
 const testimonials = [
@@ -29,47 +27,6 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const [index, setIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect mobile view by window width
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize(); // initial check
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextTestimonial();
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [index]);
-
-  const nextTestimonial = () => {
-    setIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
-  };
-
-  // Define animation props conditionally
-  const animationProps = isMobile
-    ? null
-    : {
-        initial: { opacity: 0, x: 0, scale: 0.9 },
-        animate: { opacity: 1, x: 0, scale: 1 },
-        exit: { opacity: 0, x: 0, scale: 0.9 },
-      };
-
   return (
     <section className="w-full py-16 px-4">
       <motion.div
