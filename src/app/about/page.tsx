@@ -108,7 +108,9 @@ export default function About() {
                     src={interest.image}
                     alt={interest.title}
                     fill
-                    className="object-cover transition-transform duration-300 hover:scale-105"
+                    className={`object-cover transition-transform duration-300 hover:scale-105 ${
+                      interest.title === 'Outdoor Adventures' ? 'object-[center_20%]' : ''
+                    }`}
                     priority={index === 0}
                   />
                 </div>
