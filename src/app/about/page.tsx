@@ -57,10 +57,6 @@ export default function About() {
         />
       </section>
 
-      <section id="tech-stack" className="max-w-4xl mx-auto mb-16">
-        <TechStack />
-      </section>
-
       <section className="max-w-4xl mx-auto mb-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-8">{outsideTheCode.title}</h2>
         <p className="prose prose-lg dark:prose-invert mb-12">
