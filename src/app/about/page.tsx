@@ -63,14 +63,15 @@ const staggerContainer = {
 export default function About() {
   return (
     <div className="relative min-h-screen py-16 px-4">
-      <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/20 to-[var(--secondary)]/20 pointer-events-none -z-10"></div>
+      {/* Subtle Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/10 to-[var(--secondary)]/10 pointer-events-none -z-10" />
       
       <div className="max-w-4xl mx-auto">
         <motion.section 
-          className="mb-16 text-center"
-          initial="initial"
-          animate="animate"
-          variants={fadeInUp}
+          className="mb-16 text-center bg-white/5 backdrop-blur-sm rounded-xl p-8 shadow-lg"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">
             {aboutMe.title}
@@ -82,10 +83,10 @@ export default function About() {
         </motion.section>
 
         <motion.section 
-          className="mb-16 text-center"
-          initial="initial"
-          animate="animate"
-          variants={fadeInUp}
+          className="mb-16 text-center bg-white/5 backdrop-blur-sm rounded-xl p-8 shadow-lg"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]">
             {outsideTheCode.title}
@@ -100,7 +101,7 @@ export default function About() {
             {interests.map((interest, index) => (
               <motion.div 
                 key={index} 
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-white/10 transition-all duration-300 shadow-md"
                 variants={fadeInUp}
               >
                 <div className="relative aspect-video mb-4 overflow-hidden rounded-lg">
@@ -135,7 +136,7 @@ export default function About() {
           className="text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.3 }}
         >
           <a
             href="/ChristopherKlemzResume.pdf"
