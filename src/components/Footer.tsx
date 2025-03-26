@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="w-full text-center py-8 px-4 bg-[var(--background)] text-[var(--foreground)] border-t border-white/20 md:fixed md:bottom-0 md:left-0">
+    <footer className="w-full text-center py-8 px-4 bg-[var(--background)] text-[var(--foreground)] border-t border-white/20 relative md:fixed md:bottom-0 md:left-0">
       <div className="flex justify-center space-x-6 mb-4">
         <Link href="/" className="text-lg text-[var(--foreground)] hover:text-[var(--primary)] transition-colors">
           Home
