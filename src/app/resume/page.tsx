@@ -4,7 +4,7 @@ export default function ResumePage() {
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16 relative">
-                    <div className="absolute inset-0 bg-gradient-to-b from-[var(--primary)]/5 to-transparent rounded-3xl -z-10"></div>
+                    <div className="gradient-bg rounded-3xl"></div>
                     <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[var(--foreground)]">Chris Klemz</h1>
                     <p className="text-2xl mb-6 text-[var(--foreground)]">
                         Full-Stack Software Engineer | AI & Cloud Enthusiast
@@ -32,27 +32,27 @@ export default function ResumePage() {
                         <div className="absolute -bottom-2 left-0 w-full h-1 bg-[var(--primary)]/20 rounded-full"></div>
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div className="p-6 rounded-xl bg-[var(--background-alt)] hover:bg-[var(--background-alt)]/80 transition-all duration-300 border border-white/5 hover:border-[var(--primary)]/20 hover:shadow-lg hover:shadow-[var(--primary)]/5">
+                        <div className="card">
                             <h3 className="text-xl font-bold mb-3 text-[var(--foreground)]">Programming</h3>
                             <p className="text-[var(--foreground)]/90">JavaScript, TypeScript, Python, PHP, SQL, HTML, CSS</p>
                         </div>
-                        <div className="p-6 rounded-xl bg-[var(--background-alt)] hover:bg-[var(--background-alt)]/80 transition-all duration-300 border border-white/5 hover:border-[var(--primary)]/20 hover:shadow-lg hover:shadow-[var(--primary)]/5">
+                        <div className="card">
                             <h3 className="text-xl font-bold mb-3 text-[var(--foreground)]">Frameworks & Libraries</h3>
                             <p className="text-[var(--foreground)]/90">React, Next.js, Redux, MaterialUI, TailwindCSS, Django, Django Rest Framework, WordPress, Node.js</p>
                         </div>
-                        <div className="p-6 rounded-xl bg-[var(--background-alt)] hover:bg-[var(--background-alt)]/80 transition-all duration-300 border border-white/5 hover:border-[var(--primary)]/20 hover:shadow-lg hover:shadow-[var(--primary)]/5">
+                        <div className="card">
                             <h3 className="text-xl font-bold mb-3 text-[var(--foreground)]">Databases</h3>
                             <p className="text-[var(--foreground)]/90">PostgreSQL, MySQL, SQLite3, Redis</p>
                         </div>
-                        <div className="p-6 rounded-xl bg-[var(--background-alt)] hover:bg-[var(--background-alt)]/80 transition-all duration-300 border border-white/5 hover:border-[var(--primary)]/20 hover:shadow-lg hover:shadow-[var(--primary)]/5">
+                        <div className="card">
                             <h3 className="text-xl font-bold mb-3 text-[var(--foreground)]">DevOps & Cloud</h3>
                             <p className="text-[var(--foreground)]/90">Docker, CI/CD, GitHub Actions, AWS, GCP, Vercel, Linux, Apache</p>
                         </div>
-                        <div className="p-6 rounded-xl bg-[var(--background-alt)] hover:bg-[var(--background-alt)]/80 transition-all duration-300 border border-white/5 hover:border-[var(--primary)]/20 hover:shadow-lg hover:shadow-[var(--primary)]/5">
+                        <div className="card">
                             <h3 className="text-xl font-bold mb-3 text-[var(--foreground)]">APIs & Tools</h3>
                             <p className="text-[var(--foreground)]/90">RESTful APIs, Django Rest Framework, Axios, Postman, ESLint</p>
                         </div>
-                        <div className="p-6 rounded-xl bg-[var(--background-alt)] hover:bg-[var(--background-alt)]/80 transition-all duration-300 border border-white/5 hover:border-[var(--primary)]/20 hover:shadow-lg hover:shadow-[var(--primary)]/5">
+                        <div className="card">
                             <h3 className="text-xl font-bold mb-3 text-[var(--foreground)]">Testing & Debugging</h3>
                             <p className="text-[var(--foreground)]/90">Jest, PHPUnit, Chrome DevTools</p>
                         </div>
@@ -67,7 +67,7 @@ export default function ResumePage() {
                     </h2>
 
                     {/* Job 1 */}
-                    <div className="mb-8 p-8 rounded-xl bg-[var(--background-alt)] hover:bg-[var(--background-alt)]/80 transition-all duration-300 border border-white/5 hover:border-[var(--primary)]/20 hover:shadow-lg hover:shadow-[var(--primary)]/5">
+                    <div className="card mb-8">
                         <h3 className="text-2xl font-bold mb-2 text-[var(--foreground)]">Full Stack Software Engineer - Capitol Information Group</h3>
                         <p className="text-[var(--foreground)]/70 mb-6">07/2023 - 12/2024 (Remote)</p>
                         <ul className="list-disc list-inside space-y-3 text-[var(--foreground)]/90">
@@ -82,7 +82,7 @@ export default function ResumePage() {
                     </div>
 
                     {/* Job 2 */}
-                    <div className="mb-8 p-8 rounded-xl bg-[var(--background-alt)] hover:bg-[var(--background-alt)]/80 transition-all duration-300 border border-white/5 hover:border-[var(--primary)]/20 hover:shadow-lg hover:shadow-[var(--primary)]/5">
+                    <div className="card mb-8">
                         <h3 className="text-2xl font-bold mb-2 text-[var(--foreground)]">Junior Software Engineer - Capitol Information Group</h3>
                         <p className="text-[var(--foreground)]/70 mb-6">06/2022 - 07/2023 (Remote)</p>
                         <ul className="list-disc list-inside space-y-3 text-[var(--foreground)]/90">
@@ -97,7 +97,7 @@ export default function ResumePage() {
                     </div>
 
                     {/* Job 3 */}
-                    <div className="mb-8 p-8 rounded-xl bg-[var(--background-alt)] hover:bg-[var(--background-alt)]/80 transition-all duration-300 border border-white/5 hover:border-[var(--primary)]/20 hover:shadow-lg hover:shadow-[var(--primary)]/5">
+                    <div className="card mb-8">
                         <h3 className="text-2xl font-bold mb-2 text-[var(--foreground)]">Associate Software Engineer - ExperienceIT</h3>
                         <p className="text-[var(--foreground)]/70 mb-6">10/2021 - 06/2022 (Minneapolis, MN)</p>
                         <ul className="list-disc list-inside space-y-3 text-[var(--foreground)]/90">
@@ -113,7 +113,7 @@ export default function ResumePage() {
                     </div>
 
                     {/* Job 4 */}
-                    <div className="mb-8 p-8 rounded-xl bg-[var(--background-alt)] hover:bg-[var(--background-alt)]/80 transition-all duration-300 border border-white/5 hover:border-[var(--primary)]/20 hover:shadow-lg hover:shadow-[var(--primary)]/5">
+                    <div className="card mb-8">
                         <h3 className="text-2xl font-bold mb-2 text-[var(--foreground)]">Freelance Full-Stack Developer</h3>
                         <p className="text-[var(--foreground)]/70 mb-6">08/2021 - 01/2022 (Remote)</p>
                         <ul className="list-disc list-inside space-y-3 text-[var(--foreground)]/90">
@@ -133,7 +133,7 @@ export default function ResumePage() {
                         Education & Certifications
                         <div className="absolute -bottom-2 left-0 w-full h-1 bg-[var(--primary)]/20 rounded-full"></div>
                     </h2>
-                    <div className="p-8 rounded-xl bg-[var(--background-alt)] hover:bg-[var(--background-alt)]/80 transition-all duration-300 border border-white/5 hover:border-[var(--primary)]/20 hover:shadow-lg hover:shadow-[var(--primary)]/5">
+                    <div className="card">
                         <ul className="space-y-4 text-[var(--foreground)]/90">
                             <li><strong>B.A. in Business Administration</strong> – Metro State University (2018)</li>
                             <li><strong>Full-Stack Web Development</strong> – Prime Digital Academy (2021)</li>
@@ -147,7 +147,7 @@ export default function ResumePage() {
                     <a
                         href="/ChristopherKlemzResume.pdf"
                         download
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--primary)] text-white rounded-xl hover:bg-[var(--primary)]/90 transition-all duration-300 text-lg font-semibold hover:shadow-lg hover:shadow-[var(--primary)]/20"
+                        className="btn-primary"
                     >
                         Download Full Resume
                     </a>

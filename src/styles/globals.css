@@ -2,6 +2,7 @@
 
 :root {
   --background: #2d2b30;
+  --background-alt: #36333a;
   --foreground: #ebdad9;
   --primary: #3574a9;
   --secondary: #255a85;
@@ -52,5 +53,13 @@
 
   .section {
     @apply w-full max-w-3xl bg-[var(--background)] backdrop-blur-md rounded-xl shadow-lg z-10;
+  }
+
+  .card {
+    @apply p-6 rounded-xl bg-[var(--background-alt)] hover:bg-[var(--background-alt)]/80 transition-all duration-300 border border-white/5 hover:border-[var(--primary)]/20 hover:shadow-lg hover:shadow-[var(--primary)]/5;
+  }
+
+  .gradient-bg {
+    @apply absolute inset-0 bg-gradient-to-br from-[var(--primary)]/10 to-[var(--secondary)]/10 pointer-events-none -z-10;
   }
 }
