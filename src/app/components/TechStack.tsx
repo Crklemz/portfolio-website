@@ -44,7 +44,7 @@ const devHighlights = [
 
 export default function TechStack() {
     return (
-        <section className="w-full py-8">
+        <section className="w-full py-16 px-4">
             <h2 className="text-3xl font-bold text-center mb-4">My Tech Stack</h2>
             <p className="text-center mb-8">Technologies I use to build scalable and high-performance applications.</p>
 
