@@ -1,5 +1,6 @@
-import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker, FaGithub, FaPhp, FaDatabase, FaHtml5, FaCss3, FaWordpress } from "react-icons/fa";
-import { SiNextdotjs, SiDjango, SiGooglecloud, SiPostgresql, SiMysql, SiRedux, SiJavascript, SiTypescript, SiSass, SiTailwindcss } from "react-icons/si";
+import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker, FaPhp, FaDatabase, FaWordpress } from "react-icons/fa";
+import { SiNextdotjs, SiDjango, SiGooglecloud, SiPostgresql, SiMysql, SiRedux, SiJavascript, SiTypescript, SiTailwindcss } from "react-icons/si";
+import { IconType } from "react-icons";
 
 export interface Project {
   id: string;
@@ -7,7 +8,7 @@ export interface Project {
   description: string;
   fullDescription: string;
   tech: string[];
-  techIcons: any[];
+  techIcons: IconType[];
   liveUrl: string;
   githubUrl: string;
   image: string;
