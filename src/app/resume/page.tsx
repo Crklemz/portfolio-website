@@ -1,63 +1,63 @@
 export default function ResumePage() {
     return (
-        <div className="min-h-screen py-16 px-4">
+        <div className="min-h-screen py-16 px-4 bg-[var(--background)]">
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">Chris Klemz</h1>
-                    <p className="text-xl mb-4">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[var(--foreground)]">Chris Klemz</h1>
+                    <p className="text-xl mb-4 text-[var(--foreground)]">
                         Full-Stack Software Engineer | AI & Cloud Enthusiast
                     </p>
-                    <p className="text-lg mb-6">
+                    <p className="text-lg mb-6 text-[var(--foreground)]">
                         Skilled in React, Django, Docker, WordPress, and CI/CD — I bridge front-end polish with back-end power. Clean code. Smooth launches. Happy users.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <a href="mailto:crklemz@gmail.com" className="text-primary hover:text-primary/80">📧 crklemz@gmail.com</a>
-                        <a href="https://www.linkedin.com/in/chris-klemz" className="text-primary hover:text-primary/80">🔗 LinkedIn</a>
-                        <a href="/ChristopherKlemzResume.pdf" download className="text-primary hover:text-primary/80">📄 Download Resume (PDF)</a>
+                        <a href="mailto:crklemz@gmail.com" className="text-[var(--primary)] hover:text-[var(--primary)]/80 transition-colors">📧 crklemz@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/chris-klemz" className="text-[var(--primary)] hover:text-[var(--primary)]/80 transition-colors">🔗 LinkedIn</a>
+                        <a href="/ChristopherKlemzResume.pdf" download className="text-[var(--primary)] hover:text-[var(--primary)]/80 transition-colors">📄 Download Resume (PDF)</a>
                     </div>
                 </div>
 
                 {/* Skills Section */}
                 <div className="mb-12">
-                    <h2 className="text-3xl font-bold mb-6">Skills</h2>
+                    <h2 className="text-3xl font-bold mb-6 text-[var(--foreground)]">Skills</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div>
-                            <h3 className="text-xl font-bold mb-2">Programming</h3>
-                            <p>JavaScript, TypeScript, Python, PHP, SQL, HTML, CSS</p>
+                        <div className="p-4 rounded-lg bg-[var(--background-alt)]">
+                            <h3 className="text-xl font-bold mb-2 text-[var(--foreground)]">Programming</h3>
+                            <p className="text-[var(--foreground)]">JavaScript, TypeScript, Python, PHP, SQL, HTML, CSS</p>
                         </div>
-                        <div>
-                            <h3 className="text-xl font-bold mb-2">Frameworks & Libraries</h3>
-                            <p>React, Next.js, Redux, MaterialUI, TailwindCSS, Django, Django Rest Framework, WordPress, Node.js</p>
+                        <div className="p-4 rounded-lg bg-[var(--background-alt)]">
+                            <h3 className="text-xl font-bold mb-2 text-[var(--foreground)]">Frameworks & Libraries</h3>
+                            <p className="text-[var(--foreground)]">React, Next.js, Redux, MaterialUI, TailwindCSS, Django, Django Rest Framework, WordPress, Node.js</p>
                         </div>
-                        <div>
-                            <h3 className="text-xl font-bold mb-2">Databases</h3>
-                            <p>PostgreSQL, MySQL, SQLite3, Redis</p>
+                        <div className="p-4 rounded-lg bg-[var(--background-alt)]">
+                            <h3 className="text-xl font-bold mb-2 text-[var(--foreground)]">Databases</h3>
+                            <p className="text-[var(--foreground)]">PostgreSQL, MySQL, SQLite3, Redis</p>
                         </div>
-                        <div>
-                            <h3 className="text-xl font-bold mb-2">DevOps & Cloud</h3>
-                            <p>Docker, CI/CD, GitHub Actions, AWS, GCP, Vercel, Linux, Apache</p>
+                        <div className="p-4 rounded-lg bg-[var(--background-alt)]">
+                            <h3 className="text-xl font-bold mb-2 text-[var(--foreground)]">DevOps & Cloud</h3>
+                            <p className="text-[var(--foreground)]">Docker, CI/CD, GitHub Actions, AWS, GCP, Vercel, Linux, Apache</p>
                         </div>
-                        <div>
-                            <h3 className="text-xl font-bold mb-2">APIs & Tools</h3>
-                            <p>RESTful APIs, Django Rest Framework, Axios, Postman, ESLint</p>
+                        <div className="p-4 rounded-lg bg-[var(--background-alt)]">
+                            <h3 className="text-xl font-bold mb-2 text-[var(--foreground)]">APIs & Tools</h3>
+                            <p className="text-[var(--foreground)]">RESTful APIs, Django Rest Framework, Axios, Postman, ESLint</p>
                         </div>
-                        <div>
-                            <h3 className="text-xl font-bold mb-2">Testing & Debugging</h3>
-                            <p>Jest, PHPUnit, Chrome DevTools</p>
+                        <div className="p-4 rounded-lg bg-[var(--background-alt)]">
+                            <h3 className="text-xl font-bold mb-2 text-[var(--foreground)]">Testing & Debugging</h3>
+                            <p className="text-[var(--foreground)]">Jest, PHPUnit, Chrome DevTools</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Work Experience */}
                 <div className="mb-12">
-                    <h2 className="text-3xl font-bold mb-6">Work Experience</h2>
+                    <h2 className="text-3xl font-bold mb-6 text-[var(--foreground)]">Work Experience</h2>
 
                     {/* Job 1 */}
-                    <div className="mb-8">
-                        <h3 className="text-2xl font-bold mb-2">Full Stack Software Engineer - Capitol Information Group</h3>
-                        <p className="text-gray-500 mb-4">07/2023 - 12/2024 (Remote)</p>
-                        <ul className="list-disc list-inside space-y-2">
+                    <div className="mb-8 p-6 rounded-lg bg-[var(--background-alt)]">
+                        <h3 className="text-2xl font-bold mb-2 text-[var(--foreground)]">Full Stack Software Engineer - Capitol Information Group</h3>
+                        <p className="text-[var(--foreground)]/70 mb-4">07/2023 - 12/2024 (Remote)</p>
+                        <ul className="list-disc list-inside space-y-2 text-[var(--foreground)]">
                             <li>Expanded functionality and optimized performance across 12 web applications by leading feature development, resolving complex bugs, and
                                 implementing scalable solutions using WordPress, PHP, SQL, and JavaScript/TypeScript.</li>
                             <li>Streamlined deployments with Docker, GitHub Actions, and CI/CD automation.</li>
@@ -69,10 +69,10 @@ export default function ResumePage() {
                     </div>
 
                     {/* Job 2 */}
-                    <div className="mb-8">
-                        <h3 className="text-2xl font-bold mb-2">Junior Software Engineer - Capitol Information Group</h3>
-                        <p className="text-gray-500 mb-4">06/2022 - 07/2023 (Remote)</p>
-                        <ul className="list-disc list-inside space-y-2">
+                    <div className="mb-8 p-6 rounded-lg bg-[var(--background-alt)]">
+                        <h3 className="text-2xl font-bold mb-2 text-[var(--foreground)]">Junior Software Engineer - Capitol Information Group</h3>
+                        <p className="text-[var(--foreground)]/70 mb-4">06/2022 - 07/2023 (Remote)</p>
+                        <ul className="list-disc list-inside space-y-2 text-[var(--foreground)]">
                             <li>Maintained and enhanced 12 web applications by implementing features, fixing bugs, and optimizing performance with WordPress, PHP, SQL,
                                 and JavaScript/TypeScript.</li>
                             <li>Built and improved internal tools using React, enhancing functionality and user experience.</li>
@@ -84,10 +84,10 @@ export default function ResumePage() {
                     </div>
 
                     {/* Job 3 */}
-                    <div className="mb-8">
-                        <h3 className="text-2xl font-bold mb-2">Associate Software Engineer - ExperienceIT</h3>
-                        <p className="text-gray-500 mb-4">10/2021 - 06/2022 (Minneapolis, MN)</p>
-                        <ul className="list-disc list-inside space-y-2">
+                    <div className="mb-8 p-6 rounded-lg bg-[var(--background-alt)]">
+                        <h3 className="text-2xl font-bold mb-2 text-[var(--foreground)]">Associate Software Engineer - ExperienceIT</h3>
+                        <p className="text-[var(--foreground)]/70 mb-4">10/2021 - 06/2022 (Minneapolis, MN)</p>
+                        <ul className="list-disc list-inside space-y-2 text-[var(--foreground)]">
                             <li>Built cross-platform applications using React, Redux, React Native, Angular, TypeScript, Python, and Django.</li>
                             <li>Developed a reusable component library to standardize UI elements and streamline development across projects, enhancing efficiency and
                                 consistency.</li>
@@ -100,10 +100,10 @@ export default function ResumePage() {
                     </div>
 
                     {/* Job 4 */}
-                    <div className="mb-8">
-                        <h3 className="text-2xl font-bold mb-2">Freelance Full-Stack Developer</h3>
-                        <p className="text-gray-500 mb-4">08/2021 - 01/2022 (Remote)</p>
-                        <ul className="list-disc list-inside space-y-2">
+                    <div className="mb-8 p-6 rounded-lg bg-[var(--background-alt)]">
+                        <h3 className="text-2xl font-bold mb-2 text-[var(--foreground)]">Freelance Full-Stack Developer</h3>
+                        <p className="text-[var(--foreground)]/70 mb-4">08/2021 - 01/2022 (Remote)</p>
+                        <ul className="list-disc list-inside space-y-2 text-[var(--foreground)]">
                             <li>Developed and enhanced web applications by implementing feature updates, optimizing performance, and troubleshooting complex issues
                                 using PostgreSQL, TypeScript, React, and Redux.</li>
                             <li>Collaborated directly with clients to gather requirements and translate business needs into technical solutions, ensuring alignment with project
@@ -116,12 +116,14 @@ export default function ResumePage() {
 
                 {/* Education & Certifications */}
                 <div className="mb-12">
-                    <h2 className="text-3xl font-bold mb-6">Education & Certifications</h2>
-                    <ul className="space-y-2">
-                        <li><strong>B.A. in Business Administration</strong> – Metro State University (2018)</li>
-                        <li><strong>Full-Stack Web Development</strong> – Prime Digital Academy (2021)</li>
-                        <li><strong>Agile SAFe Certification</strong> – Scaled Agile (2022)</li>
-                    </ul>
+                    <h2 className="text-3xl font-bold mb-6 text-[var(--foreground)]">Education & Certifications</h2>
+                    <div className="p-6 rounded-lg bg-[var(--background-alt)]">
+                        <ul className="space-y-2 text-[var(--foreground)]">
+                            <li><strong>B.A. in Business Administration</strong> – Metro State University (2018)</li>
+                            <li><strong>Full-Stack Web Development</strong> – Prime Digital Academy (2021)</li>
+                            <li><strong>Agile SAFe Certification</strong> – Scaled Agile (2022)</li>
+                        </ul>
+                    </div>
                 </div>
 
                 {/* CTA for Download */}
@@ -129,7 +131,7 @@ export default function ResumePage() {
                     <a
                         href="/ChristopherKlemzResume.pdf"
                         download
-                        className="btn-primary inline-block"
+                        className="inline-block px-6 py-3 bg-[var(--primary)] text-white rounded-lg hover:bg-[var(--primary)]/90 transition-colors"
                     >
                         📄 Download Full Resume
                     </a>

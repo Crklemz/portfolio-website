@@ -24,6 +24,9 @@ export default function Navbar() {
                 <Link href="/projects" className="text-lg text-[var(--foreground)] hover:text-[var(--primary)] transition-colors">
                     Projects
                 </Link>
+                <Link href="/resume" className="text-lg text-[var(--foreground)] hover:text-[var(--primary)] transition-colors">
+                    Resume
+                </Link>
                 <Link href="/contact" className="text-lg text-[var(--foreground)] hover:text-[var(--primary)] transition-colors">
                     Contact
                 </Link>
@@ -48,6 +51,9 @@ export default function Navbar() {
                     </Link>
                     <Link href="/projects" className="block py-4 text-center text-xl text-[var(--foreground)] hover:text-[var(--primary)] transition-colors">
                         Projects
+                    </Link>
+                    <Link href="/resume" className="block py-4 text-center text-xl text-[var(--foreground)] hover:text-[var(--primary)] transition-colors">
+                        Resume
                     </Link>
                     <Link href="/contact" className="block py-4 text-center text-xl text-[var(--foreground)] hover:text-[var(--primary)] transition-colors">
                         Contact
