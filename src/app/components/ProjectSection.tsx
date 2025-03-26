@@ -34,7 +34,7 @@ const projects = [
 
 export default function ProjectSection() {
     return (
-        <section className="w-full py-16 px-4">
+        <section className="w-full py-8 px-4 mb-8">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
