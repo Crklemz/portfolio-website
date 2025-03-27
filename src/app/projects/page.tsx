@@ -76,7 +76,7 @@ function ProjectsContent() {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+                  <h3 className="text-2xl font-bold mb-4">{project.placeholder ? "Placeholder! " + project.title + " - coming soon" : project.title}</h3>
                   <p className="text-lg mb-6 text-[var(--foreground)]/80">{project.fullDescription}</p>
                   
                   <div className="mb-6">
