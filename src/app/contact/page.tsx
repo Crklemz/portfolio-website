@@ -64,23 +64,6 @@ export default function Contact() {
             </motion.button>
           </form>
         </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="mt-12 text-center"
-        >
-          <p className="text-[var(--foreground)]/80 mb-4">Or reach out directly:</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="mailto:crklemz@gmail.com" className="text-primary hover:text-primary/80 transition-colors">
-              📧 crklemz@gmail.com
-            </a>
-            <a href="https://www.linkedin.com/in/chris-klemz" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
-              🔗 LinkedIn
-            </a>
-          </div>
-        </motion.div>
       </div>
     </div>
   );
