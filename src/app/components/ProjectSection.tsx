@@ -37,7 +37,7 @@ export default function ProjectSection() {
                                 />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                                <h3 className="text-xl font-bold mb-2">{project.placeholder ? "Placeholder! " + project.title + " - coming soon" : project.title}</h3>
                                 <p className="mb-4 text-[var(--foreground)]/80">{project.description}</p>
                                 <div className="flex flex-wrap gap-2 mb-6">
                                     {project.tech.map((tech, idx) => (
