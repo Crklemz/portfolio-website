@@ -101,7 +101,7 @@ export default function About() {
             {interests.map((interest, index) => (
               <motion.div 
                 key={index} 
-                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-white/10 transition-all duration-300 shadow-md"
+                className="bg-[var(--background-alt)]/80 md:bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-[var(--background-alt)]/90 md:hover:bg-white/10 transition-all duration-300 shadow-md"
                 variants={fadeInUp}
               >
                 <div className="relative aspect-video mb-4 overflow-hidden rounded-lg">
