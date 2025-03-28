@@ -27,7 +27,7 @@ export const projects: Project[] = [
     techIcons: [SiNextdotjs, SiTailwindcss, SiTypescript],
     liveUrl: "https://chrisklemz.com",
     githubUrl: "https://github.com/crklemz/portfolio",
-    image: "/images/projects/portfolio.png",
+    image: "/images/projects/commingsoon.png",
     featured: true,
   },
   {
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     techIcons: [FaReact, FaNodeJs],
     liveUrl: "https://blog-generator-demo.com",
     githubUrl: "https://github.com/crklemz/blog-generator",
-    image: "/images/projects/blog-generator.png",
+    image: "/images/projects/commingsoon.png",
     featured: true,
   },
   {
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     techIcons: [SiDjango, FaReact, SiPostgresql, SiRedux],
     liveUrl: "https://ecommerce-dashboard-demo.com",
     githubUrl: "https://github.com/crklemz/ecommerce-dashboard",
-    image: "/images/projects/ecommerce-dashboard.png",
+    image: "/images/projects/commingsoon.png",
     featured: true,
   },
   {
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     techIcons: [FaPhp, FaWordpress, SiJavascript, SiMysql],
     liveUrl: "https://wordpress-plugin-suite-demo.com",
     githubUrl: "https://github.com/crklemz/wordpress-plugin-suite",
-    image: "/images/projects/wordpress-plugins.png",
+    image: "/images/projects/commingsoon.png",
     featured: true,
   },
   {
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     techIcons: [FaPython, FaAws, SiGooglecloud, FaDocker],
     liveUrl: "https://cloud-manager-demo.com",
     githubUrl: "https://github.com/crklemz/cloud-manager",
-    image: "/images/projects/cloud-manager.png",
+    image: "/images/projects/commingsoon.png",
     featured: false,
   },
   {
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     techIcons: [FaReact, FaNodeJs, FaDatabase],
     liveUrl: "https://chat-app-demo.com",
     githubUrl: "https://github.com/crklemz/chat-app",
-    image: "/images/projects/chat-app.png",
+    image: "/images/projects/commingsoon.png",
     featured: false,
   },
 ]; 

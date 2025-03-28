@@ -33,7 +33,7 @@ export default function ProjectSection() {
                                     src={project.image}
                                     alt={project.title}
                                     fill
-                                    className="object-cover"
+                                    className="object-contain transition-transform duration-300 hover:scale-110"
                                 />
                             </div>
                             <div className="p-6">
