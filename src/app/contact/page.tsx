@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,12 +15,16 @@ export default function Contact() {
     message: string;
   }>({ type: null, message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleRecaptchaChange = (token: string | null) => {
+    setRecaptchaToken(token);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -27,13 +32,17 @@ export default function Contact() {
     setIsSubmitting(true);
     setStatus({ type: null, message: "" });
 
+    if (!recaptchaToken) {
+      setStatus({ type: "error", message: "Please complete the reCAPTCHA" });
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, recaptchaToken }),
       });
 
       const data = await response.json();
@@ -47,6 +56,10 @@ export default function Contact() {
         message: "Message sent successfully! I'll get back to you soon.",
       });
       setFormData({ name: "", email: "", message: "" });
+      setRecaptchaToken(null);
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
     } catch (error) {
       setStatus({
         type: "error",
@@ -61,7 +74,6 @@ export default function Contact() {
     <div className="relative min-h-screen py-16 px-4">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/10 to-[var(--secondary)]/10 pointer-events-none -z-10" />
-      
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -86,9 +98,7 @@ export default function Contact() {
           {status.type && (
             <div
               className={`mb-4 p-4 rounded-lg ${
-                status.type === "success"
-                  ? "bg-green-500/20 text-green-500"
-                  : "bg-red-500/20 text-red-500"
+                status.type === "success" ? "bg-green-500/20 text-green-500" : "bg-red-500/20 text-red-500"
               }`}
             >
               {status.message}
@@ -129,6 +139,13 @@ export default function Contact() {
                 className="w-full border border-[var(--secondary)] p-3 rounded-lg bg-white/10 text-[var(--foreground)] focus:outline-none focus:border-[var(--primary)] focus:ring-2 focus:ring-[var(--primary)]/50 transition-all"
                 rows={6}
                 placeholder="Your message..."
+              />
+            </div>
+            <div className="flex justify-center">
+              <ReCAPTCHA
+                sitekey="6Len5wIrAAAAAPzb14NJ0mgFopf9gOhIS3caqIHa"
+                onChange={handleRecaptchaChange}
+                ref={recaptchaRef}
               />
             </div>
             <motion.button
