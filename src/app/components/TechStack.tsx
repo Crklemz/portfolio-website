@@ -35,10 +35,11 @@ const techStack = [
 ];
 
 const devHighlights = [
-    'Developed responsive front-ends using React and customized WordPress themes, while building robust back-end systems with Django.',
+    'Built responsive front-ends with React and custom WordPress themes, enhancing UX and performance across multiple sites.',
+    'Developed scalable back-end systems and APIs using Django, Node.js, and PHP to support dynamic content and business operations.',
+    'Implemented CI/CD pipelines using GitHub Actions and Docker, ensuring smooth deployments and efficient workflows.',
     'Modernized legacy applications and led full-stack feature development across diverse platforms.',
-    'Integrated AWS services (Lambda, S3, CloudFront) to enhance application performance.',
-    'Automated deployments and streamlined development processes using Docker and GitHub Actions.',
+    'Worked with AWS-based infrastructure to support deployment, hosting, and performance improvements for web applications.',
     'Engineered dynamic web applications utilizing the LAMP stack (Linux, Apache, MySQL, PHP) to deliver scalable solutions.',
 ];
 
@@ -73,8 +74,8 @@ export default function TechStack() {
                 <h3 className="text-xl font-bold mb-4 text-center">Development Highlights</h3>
                 <ul className="space-y-3">
                     {devHighlights.map((highlight, index) => (
-                        <li 
-                            key={index} 
+                        <li
+                            key={index}
                             className="flex items-start"
                         >
                             <span className="text-primary mr-2">•</span>
