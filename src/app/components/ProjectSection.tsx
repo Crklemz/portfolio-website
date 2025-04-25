@@ -28,7 +28,7 @@ export default function ProjectSection() {
                             viewport={{ once: true }}
                             className="bg-white/5 backdrop-blur-md rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300"
                         >
-                            <div className="relative w-full h-48 mb-4">
+                            <div className="relative w-full h-48 mt-4 mb-4">
                                 <Image
                                     src={project.image}
                                     alt={project.title}
